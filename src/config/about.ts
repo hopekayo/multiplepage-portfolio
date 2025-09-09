@@ -1,10 +1,11 @@
 export const aboutConfig = {
   title: "About Me",
-  description: "This is where you can introduce yourself or your company. Share your story, mission, and values. Explain what makes you unique and why people should be interested in your work. Keep it concise but engaging.",
+  description: "A front-end engineer who is constantly learning and exploring new technologies.",
+  // description: "This is where you can introduce yourself or your company. Share your stor¿y, mission, and values. Explain what makes you unique and why people should be interested in your work. Keep it concise but engaging.",
   image: "/assets/images/about.jpg",
   stats: [
     {
-      value: "5+",
+      value: "10+",
       label: "Years Experience",
     },
     {
@@ -17,6 +18,9 @@ export const aboutConfig = {
     },
   ],
   skills: [
+    "Vue",
+    "Angular",
+    "React",
     "Next.js",
     "React",
     "TypeScript",
@@ -24,28 +28,45 @@ export const aboutConfig = {
     "Node.js",
     "Docker",
     "Git",
-    "AWS"
+    // "AWS"
   ],
   experience: {
     title: "Experience",
     items: [
       {
-        period: "2022 - Present",
+        period: "2025 - Present",
+        role: "Frontend Development Expert",
+        company: "LongShine",
+        description: "",
+        // description: "Leading frontend development for EdgeOne platform and templates."
+      },
+      {
+        period: "2023 - 2024",
         role: "Senior Frontend Developer",
-        company: "Tencent Cloud",
-        description: "Leading frontend development for EdgeOne platform and templates."
+        company: "AsiaInfo",
+        description: "",
+        // description: "Leading frontend development for EdgeOne platform and templates."
       },
       {
-        period: "2020 - 2022",
+        period: "2021 - 2023",
+        role: "Senior Frontend Developer",
+        company: "NetEase Media",
+        description: "",
+        // description: "Leading frontend development for EdgeOne platform and templates."
+      },
+      {
+        period: "2019 - 2021",
+        role: "Full-stack engineer",
+        company: "Citicpub",
+        description: "",
+        // description: "Developed and maintained multiple web applications and tools."
+      },
+      {
+        period: "2014 - 2019",
         role: "Frontend Developer",
-        company: "Tencent Cloud",
-        description: "Developed and maintained multiple web applications and tools."
-      },
-      {
-        period: "2018 - 2020",
-        role: "Junior Developer",
-        company: "Tencent Cloud",
-        description: "Worked on various client projects and internal tools."
+        company: "TMTPost", 
+        description: "",
+        // description: "Worked on various client projects and internal tools."
       }
     ]
   },

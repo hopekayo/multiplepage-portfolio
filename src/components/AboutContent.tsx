@@ -53,7 +53,7 @@ export default function AboutContent() {
                   <p className="text-xs uppercase text-neutral-400 dark:text-neutral-500 trackign-widest">{item.period}</p>
                   <h3 className="my-1 text-lg font-bold dark:text-neutral-100">{item.role}</h3>
                   <p className="mb-1 text-sm font-medium dark:text-neutral-300">{item.company}</p>
-                  <p className="text-sm font-light text-neutral-600 dark:text-neutral-400">{item.description}</p>
+                  <p className="text-sm font-light text-neutral-600 dark:text-neutral-400">{item?.description}</p>
                 </div>
               </div>
             ))}

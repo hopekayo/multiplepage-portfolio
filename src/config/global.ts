@@ -1,8 +1,9 @@
 export const globalConfig = {
   site: {
     name: "Your Portfolio Name",
-    author: "Your Name",
-    description: "A brief description of your portfolio website",
+    author: "Hopekayo",
+    // description: "A brief description of your portfolio website",
+    description: "自由，是勇敢和独立的果实",
     url: "/"
   },
   navigation: {
@@ -12,10 +13,10 @@ export const globalConfig = {
         title: "Home",
         href: "/"
       },
-      {
-        title: "Projects",
-        href: "/projects"
-      },
+      // {
+      //   title: "Projects",
+      //   href: "/projects"
+      // },
       {
         title: "Posts",
         href: "/posts"
@@ -28,11 +29,11 @@ export const globalConfig = {
   },
   footer: {
     aria: "Footer Navigation",
-    copyright: "© 2025 Your Name. All rights reserved.",
+    copyright: "© 2025 Hopekayo. All rights reserved.",
     social: {
-      twitter: "https://x.com/TencentCloudEO",
-      github: "https://github.com/TencentEdgeOne",
-      email: "media_service@tencent.com"
+      twitter: "https://x.com/hopekayo",
+      github: "https://github.com/hopekayo",
+      email: "hopekayo@gmail.com"
     }
   }
-} as const; 
+} as const;   
