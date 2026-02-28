@@ -4,7 +4,7 @@ description: "整理两篇关于移民冲动与身份认同的腾讯文档核心
 author: "朱后凯"
 date: "2026-02-28"
 tags: ["reading", "notes", "immigration", "thoughts"]
-image: "/assets/images/posts/post1.jpg"
+image: "/assets/images/posts/thinking-identity.jpg"
 ---
 
 # 移民思考与身份认同 - 阅读笔记

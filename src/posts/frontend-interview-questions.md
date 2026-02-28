@@ -4,7 +4,7 @@ description: "面向高级/资深前端工程师岗位的面试题整理，涵�
 author: "朱后凯"
 date: "2026-02-27"
 tags: ["frontend", "interview", "javascript", "react", "vue", "performance"]
-image: "/assets/images/posts/post1.jpg"
+image: "/assets/images/posts/coding-frontend.jpg"
 ---
 
 # 高频高级前端开发面试题
