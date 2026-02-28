@@ -4,10 +4,10 @@
   "private": true,
   "scripts": {
     "dev": "next dev",
-    "build": "next build",
+    "generate-posts": "node scripts/generate-posts.js",
+    "build": "npm run generate-posts && next build",
     "start": "next start",
-    "lint": "next lint",
-    "generate-posts": "node scripts/generate-posts.js"
+    "lint": "next lint"
   },
   "keywords": [],
   "author": "",
