@@ -11,7 +11,7 @@ export const globalConfig = {
     items: [
       {
         title: "Home",
-        href: "/"
+        href: "/home"
       },
       // {
       //   title: "Projects",

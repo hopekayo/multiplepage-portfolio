@@ -33,8 +33,11 @@ export default function Navbar() {
   }
 
   const isActive = (path: string) => {
-    if (path === '/') {
-      return pathname === '/';
+    if (path === '/home') {
+      return pathname === '/home';
+    }
+    if (path === '/posts') {
+      return pathname === '/' || pathname.startsWith('/posts');
     }
     return pathname.startsWith(path);
   };
