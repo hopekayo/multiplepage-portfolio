@@ -2,6 +2,7 @@
 title: "Testing React Applications"
 description: "A comprehensive guide to testing React applications with Jest and React Testing Library"
 author: "Emma Davis"
+draft: true
 tags: ["react", "testing", "jest", "frontend"]
 image: "/assets/images/posts/post3.jpg"
 ---

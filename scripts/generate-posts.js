@@ -33,6 +33,12 @@ for (const file of files) {
     // 解析 frontmatter
     const { data, content } = matter(fileContent);
     
+    // 跳过 draft 文章
+    if (data.draft === true) {
+      console.log(`Skipping draft: ${file}`);
+      continue;
+    }
+    
     // 生成 HTML
     const html = marked.parse(content);
     

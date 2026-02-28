@@ -2,6 +2,7 @@
 title: "My Blog Journey"
 description: "A personal journey of learning and growth in web development"
 author: "John Doe"
+draft: true
 tags: ["web development", "learning", "personal"]
 image: "/assets/images/posts/post1.jpg"
 ---

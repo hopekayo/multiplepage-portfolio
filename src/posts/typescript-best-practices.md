@@ -2,6 +2,7 @@
 title: "TypeScript Best Practices in 2024"
 description: "Essential TypeScript patterns and practices for modern web development"
 author: "Alex Johnson"
+draft: true
 tags: ["typescript", "javascript", "programming", "best practices"]
 image: "/assets/images/posts/post1.jpg"
 ---

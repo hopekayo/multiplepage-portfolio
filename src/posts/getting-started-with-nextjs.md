@@ -2,6 +2,7 @@
 title: "Getting Started with Next.js 14"
 description: "A comprehensive guide to building modern web applications with Next.js 14"
 author: "Jane Smith"
+draft: true
 tags: ["nextjs", "react", "web development", "tutorial"]
 image: "/assets/images/posts/post2.jpg"
 ---

@@ -2,6 +2,7 @@
 title: "React Performance Optimization Techniques"
 description: "Learn how to optimize your React applications for better performance"
 author: "Mike Chen"
+draft: true
 tags: ["react", "performance", "optimization", "frontend"]
 image: "/assets/images/posts/post3.jpg"
 ---

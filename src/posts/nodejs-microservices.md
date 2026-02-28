@@ -2,6 +2,7 @@
 title: "Building Microservices with Node.js"
 description: "A practical guide to building scalable microservices using Node.js"
 author: "David Brown"
+draft: true
 tags: ["nodejs", "microservices", "backend", "architecture"]
 image: "/assets/images/posts/post2.jpg"
 ---
