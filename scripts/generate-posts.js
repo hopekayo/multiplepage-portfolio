@@ -51,6 +51,7 @@ for (const file of files) {
       slug: generateSlug(file), // 使用文件名生成 slug
       tags: data.tags,
       author: data.author,
+      category: data.category || "默认", // 添加默认分类
       readTime: data.readTime || "5", // 添加默认阅读时间
       content: content,
       html: html

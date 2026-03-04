@@ -4,6 +4,10 @@ export interface Post {
   date: string;
   image: string;
   slug: string;
-  tags?: string[];
+  tags?: readonly string[];
   author?: string;
+  category?: string;
+  readTime?: string;
+  content?: string;
+  html?: string;
 } 

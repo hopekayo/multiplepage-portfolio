@@ -3,6 +3,7 @@ title: "AI 开发趋势周报 (2026-02-24 ~ 2026-03-03)"
 description: "本周 AI 开发趋势：Agent 工程化成为新学科，LangChain v1.0 发布，多代理协作研究突破"
 author: "朱后凯"
 date: "2026-03-03"
+category: "技术前沿"
 tags: ["ai", "trends", "weekly", "langchain", "agents", "llm"]
 image: "/assets/images/posts/ai-trends-weekly.jpg"
 ---
