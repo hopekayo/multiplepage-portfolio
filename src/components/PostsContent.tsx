@@ -11,12 +11,18 @@ export default function PostsContent() {
   const [currentPage, setCurrentPage] = useState(1);
   const [selectedCategory, setSelectedCategory] = useState("全部");
 
-  // 根据分类筛选文章
+  // 根据分类筛选文章，并按日期倒序排序
   const filteredPosts = useMemo(() => {
-    if (selectedCategory === "全部") {
-      return postsConfig.posts;
+    let posts = [...postsConfig.posts];
+    
+    if (selectedCategory !== "全部") {
+      posts = posts.filter(post => post.category === selectedCategory);
     }
-    return postsConfig.posts.filter(post => post.category === selectedCategory);
+    
+    // 按日期倒序排序（最新的在前）
+    posts.sort((a, b) => new Date(b.date).getTime() - new Date(a.date).getTime());
+    
+    return posts;
   }, [selectedCategory]);
 
   const totalPages = Math.ceil(filteredPosts.length / POSTS_PER_PAGE);
