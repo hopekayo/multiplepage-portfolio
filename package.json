@@ -6,6 +6,8 @@
     "dev": "next dev",
     "generate-posts": "node scripts/generate-posts.js",
     "build": "npm run generate-posts && next build",
+    "build:universal": "./scripts/build-universal.sh",
+    "deploy:github": "npx gh-pages -d ./out -b gh-pages",
     "start": "next start",
     "lint": "next lint"
   },
