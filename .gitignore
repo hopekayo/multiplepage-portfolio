@@ -39,6 +39,9 @@ next-env.d.ts
 # Build output (deployed separately)
 /out/
 
+# Auto-generated posts (source of truth is src/posts/)
+/src/app/posts/
+
 # Large binary files
 *.node
 *.dll
