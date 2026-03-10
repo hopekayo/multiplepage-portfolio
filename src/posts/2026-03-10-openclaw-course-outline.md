@@ -23,7 +23,7 @@ image: "/assets/images/posts/openclaw-course.jpg"
 - 配置模型 API Key
 - 对接 QQBot
 - 对接飞书
-- 安装问题排查
+- 核心配置说明
 
 ## 三、核心功能演示
 
