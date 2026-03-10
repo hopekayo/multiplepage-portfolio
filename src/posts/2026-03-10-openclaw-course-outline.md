@@ -10,12 +10,6 @@ image: "/assets/images/posts/openclaw-course.jpg"
 
 # OpenClaw 安装使用与风险 - 课程大纲
 
-**时长：** 90 分钟  
-**讲师：** 朱后凯（吃货龙虾）  
-**日期：** 2026 年 3 月
-
----
-
 ## 一、OpenClaw 是什么
 
 - 定义与对比
@@ -80,15 +74,6 @@ image: "/assets/images/posts/openclaw-course.jpg"
 ## 七、总结与问答
 
 - 参考资料 & Q&A
-
----
-
-## 配套材料
-
-- PPT（约 34 页）
-- 演示环境（已配置 QQBot + 飞书）
-- 学员实操手册
-- 配置文件示例（含 QQBot/飞书配置模板）
 
 ---
 
