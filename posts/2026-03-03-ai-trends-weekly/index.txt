@@ -1,0 +1,143 @@
+3:I[5613,[],""]
+5:I[1778,[],""]
+6:I[3397,["185","static/chunks/app/layout-2cf9e241889d2c49.js"],""]
+4:["slug","2026-03-03-ai-trends-weekly","d"]
+0:["XkPPpES-Y_HzAut79GXO5",[[["",{"children":["posts",{"children":[["slug","2026-03-03-ai-trends-weekly","d"],{"children":["__PAGE__?{\"slug\":\"2026-03-03-ai-trends-weekly\"}",{}]}]}]},"$undefined","$undefined",true],["",{"children":["posts",{"children":[["slug","2026-03-03-ai-trends-weekly","d"],{"children":["__PAGE__",{},["$L1","$L2",null]]},[null,["$","$L3",null,{"parallelRouterKey":"children","segmentPath":["children","posts","children","$4","children"],"loading":"$undefined","loadingStyles":"$undefined","loadingScripts":"$undefined","hasLoading":false,"error":"$undefined","errorStyles":"$undefined","errorScripts":"$undefined","template":["$","$L5",null,{}],"templateStyles":"$undefined","templateScripts":"$undefined","notFound":"$undefined","notFoundStyles":"$undefined","styles":null}],null]]},["$","$L3",null,{"parallelRouterKey":"children","segmentPath":["children","posts","children"],"loading":"$undefined","loadingStyles":"$undefined","loadingScripts":"$undefined","hasLoading":false,"error":"$undefined","errorStyles":"$undefined","errorScripts":"$undefined","template":["$","$L5",null,{}],"templateStyles":"$undefined","templateScripts":"$undefined","notFound":"$undefined","notFoundStyles":"$undefined","styles":null}]]},[null,["$","html",null,{"lang":"en","suppressHydrationWarning":true,"children":["$","body",null,{"className":"__className_f367f3","children":["$","$L6",null,{"children":["$","div",null,{"className":"relative h-screen","children":["$","div",null,{"className":"relative z-10 flex flex-col h-full","children":["$","$L3",null,{"parallelRouterKey":"children","segmentPath":["children"],"loading":"$undefined","loadingStyles":"$undefined","loadingScripts":"$undefined","hasLoading":false,"error":"$undefined","errorStyles":"$undefined","errorScripts":"$undefined","template":["$","$L5",null,{}],"templateStyles":"$undefined","templateScripts":"$undefined","notFound":[["$","title",null,{"children":"404: This page could not be found."}],["$","div",null,{"style":{"fontFamily":"system-ui,\"Segoe UI\",Roboto,Helvetica,Arial,sans-serif,\"Apple Color Emoji\",\"Segoe UI Emoji\"","height":"100vh","textAlign":"center","display":"flex","flexDirection":"column","alignItems":"center","justifyContent":"center"},"children":["$","div",null,{"children":[["$","style",null,{"dangerouslySetInnerHTML":{"__html":"body{color:#000;background:#fff;margin:0}.next-error-h1{border-right:1px solid rgba(0,0,0,.3)}@media (prefers-color-scheme:dark){body{color:#fff;background:#000}.next-error-h1{border-right:1px solid rgba(255,255,255,.3)}}"}}],["$","h1",null,{"className":"next-error-h1","style":{"display":"inline-block","margin":"0 20px 0 0","padding":"0 23px 0 0","fontSize":24,"fontWeight":500,"verticalAlign":"top","lineHeight":"49px"},"children":"404"}],["$","div",null,{"style":{"display":"inline-block"},"children":["$","h2",null,{"style":{"fontSize":14,"fontWeight":400,"lineHeight":"49px","margin":0},"children":"This page could not be found."}]}]]}]}]],"notFoundStyles":[],"styles":null}]}]}]}]}]}],null]],[[["$","link","0",{"rel":"stylesheet","href":"/_next/static/css/c2d646e594b909bf.css","precedence":"next","crossOrigin":""}]],"$L7"]]]]
+7:[["$","meta","0",{"name":"viewport","content":"width=device-width, initial-scale=1"}],["$","meta","1",{"charSet":"utf-8"}],["$","title","2",{"children":"Someone's Portfolio"}],["$","meta","3",{"name":"description","content":"A showcase of my work and thoughts"}],["$","meta","4",{"name":"next-size-adjust"}]]
+1:null
+8:I[6836,["51","static/chunks/51-db90af79fa0fde6c.js","939","static/chunks/939-42d9698cb692b591.js","333","static/chunks/app/posts/%5Bslug%5D/page-a8fec07d28a2c1fa.js"],""]
+a:I[8722,["51","static/chunks/51-db90af79fa0fde6c.js","939","static/chunks/939-42d9698cb692b591.js","333","static/chunks/app/posts/%5Bslug%5D/page-a8fec07d28a2c1fa.js"],""]
+9:T14f3,<h1>📊 AI 开发趋势周报</h1>
+<p><strong>时间范围</strong>: 2026 年 2 月 24 日 - 2026 年 3 月 3 日</p>
+<hr>
+<h2>🔥 本周 5 大趋势</h2>
+<h3>1. Agent 工程化成为新学科</h3>
+<p>LangChain 正式提出 <strong>&quot;Agent Engineering&quot;</strong> 概念，强调代理需要专门的工程方法论，包括可观测性、评估和持续改进。这不再是简单的 prompt 工程，而是一门独立的学科。</p>
+<h3>2. 生产环境代理监控成为刚需</h3>
+<p>多篇内容强调 <strong>&quot;你无法像传统软件一样监控代理&quot;</strong>。生产环境的代理行为具有非确定性，需要专门的追踪和评估系统（如 LangSmith）。</p>
+<h3>3. 上下文管理是深代理核心挑战</h3>
+<p>随着代理任务复杂度增长，有效的上下文管理对于防止上下文膨胀至关重要。出现了专门的上下文管理方案和混合 SQL + 向量检索系统。</p>
+<h3>4. LLM 成本优化实践成熟</h3>
+<p>通过 <strong>验证感知的多层缓存策略</strong>，LLM 成本可降低 <strong>30%</strong>，这已成为生产环境的最佳实践。</p>
+<h3>5. 多代理协作研究突破</h3>
+<p>arXiv 多篇论文聚焦多代理系统的协作机制：</p>
+<ul>
+<li><strong>DIG</strong> (Dynamic Interaction Graph) - 多代理协作的可解释动态决策路径</li>
+<li><strong>EmCoop</strong> - 具身多代理协作基准框架</li>
+</ul>
+<hr>
+<h2>📰 重要发布</h2>
+<table>
+<thead>
+<tr>
+<th>名称</th>
+<th>来源</th>
+<th>描述</th>
+</tr>
+</thead>
+<tbody><tr>
+<td><strong>LangSmith Agent Builder (GA)</strong></td>
+<td>LangChain</td>
+<td>代理构建平台正式发布，包含记忆系统和工具注册表</td>
+</tr>
+<tr>
+<td><strong>LangChain/LangGraph v1.0</strong></td>
+<td>LangChain</td>
+<td>代理框架达到 v1.0 里程碑</td>
+</tr>
+<tr>
+<td><strong>WKGFC</strong></td>
+<td>arXiv</td>
+<td>基于知识图谱的事实核查多代理系统</td>
+</tr>
+<tr>
+<td><strong>TraderBench</strong></td>
+<td>arXiv</td>
+<td>AI 代理金融交易鲁棒性基准</td>
+</tr>
+</tbody></table>
+<hr>
+<h2>💻 实战应用</h2>
+<h3>代码示例：验证感知缓存策略</h3>
+<pre><code class="language-python"># 通过多层缓存降低 LLM 成本 30%
+from langchain.cache import InMemoryCache, SQLiteCache
+from langchain.globals import set_llm_cache
+
+# 设置验证感知的缓存层
+set_llm_cache(SQLiteCache(database_path=&quot;.langchain.db&quot;))
+
+# 相同的请求会命中缓存，降低成本
+response = llm.invoke(&quot;你的 prompt&quot;)
+</code></pre>
+<h3>生产环境案例</h3>
+<ul>
+<li><strong>monday Service</strong> - 评估驱动的客户服务代理开发框架</li>
+<li><strong>DeepAgents</strong> - LangChain 的代理在 Terminal Bench 2.0 从 Top 30 提升到 Top 5</li>
+<li><strong>TraderBench</strong> - 揭示当前代理在市场适应性方面的局限</li>
+</ul>
+<hr>
+<h2>⚠️ 踩坑记录</h2>
+<h3>本周遇到的问题</h3>
+<ol>
+<li><strong>GitHub Trending 无法访问</strong> - 反爬保护增强</li>
+<li><strong>Reddit/Hacker News 需要登录</strong> - 内容获取受限</li>
+<li><strong>Medium 付费墙</strong> - 部分高质量内容无法访问</li>
+<li><strong>Hugging Face Blog 访问限制</strong> - API 调用受限</li>
+</ol>
+<h3>解决方案</h3>
+<ul>
+<li>使用 RSS 源替代直接爬取（arXiv、LangChain Blog）</li>
+<li>优先访问开放 API 和官方博客</li>
+<li>对于受限内容，标记为&quot;无法访问&quot;并在报告中说明</li>
+</ul>
+<hr>
+<h2>🛠️ 开发者工具</h2>
+<h3>本周推荐</h3>
+<ol>
+<li><p><strong>LangSmith Agent Builder</strong> - 代理构建平台（已 GA）</p>
+<ul>
+<li>支持代理聊天、文件上传</li>
+<li>内置工具注册表</li>
+<li>记忆系统：代理可从用户反馈中学习</li>
+</ul>
+</li>
+<li><p><strong>LangGraph v1.0</strong> - 代理编排框架稳定版</p>
+<ul>
+<li>生产环境就绪</li>
+<li>更好的可观测性</li>
+</ul>
+</li>
+<li><p><strong>arXiv 论文追踪</strong> - 6 篇高价值论文</p>
+<ul>
+<li>多代理协作框架</li>
+<li>金融 AI 基准测试</li>
+<li>医疗 AI 推理验证</li>
+</ul>
+</li>
+</ol>
+<hr>
+<h2>📈 趋势分析</h2>
+<h3>技术演进方向</h3>
+<ol>
+<li><strong>从单代理到多代理协作</strong> - 复杂任务需要多个 specialized agents 协作</li>
+<li><strong>从实验到生产</strong> - 可观测性、评估、监控成为刚需</li>
+<li><strong>从粗放到精细</strong> - 上下文管理、成本优化成为核心竞争力</li>
+</ol>
+<h3>值得关注的方向</h3>
+<ul>
+<li><strong>代理记忆系统</strong> - 让代理从历史交互中学习</li>
+<li><strong>混合检索系统</strong> - SQL + 向量检索结合</li>
+<li><strong>代理评估框架</strong> - 系统化的评估方法论</li>
+</ul>
+<hr>
+<h2>📚 参考链接</h2>
+<ul>
+<li><a href="https://blog.langchain.dev/">LangChain Blog</a></li>
+<li><a href="https://smith.langchain.com/">LangSmith Agent Builder</a></li>
+<li><a href="https://arxiv.org/list/cs.AI/recent">arXiv CS.AI</a></li>
+<li><a href="https://towardsdatascience.com/">Towards Data Science</a></li>
+<li><a href="https://www.anthropic.com/research">Anthropic Research</a></li>
+</ul>
+<hr>
+<p><strong>报告生成时间</strong>: 2026 年 3 月 3 日 15:30 GMT+8<br><strong>信息来源</strong>: 6 个主要来源（部分因反爬保护无法完全访问）</p>
+2:["$","div",null,{"className":"min-h-screen flex flex-col","children":[["$","div",null,{"className":"fixed inset-0 z-0","children":[["$","div",null,{"className":"absolute inset-0 bg-[linear-gradient(to_right,#8080800a_1px,transparent_1px),linear-gradient(to_bottom,#8080800a_1px,transparent_1px)] bg-[size:28px_48px] -z-10"}],["$","div",null,{"className":"absolute left-0 right-0 top-0 -z-10 m-auto h-[1200px] w-[1200px] rounded-full bg-neutral-400 opacity-10 blur-[100px]"}]]}],["$","$L8",null,{}],["$","main",null,{"className":"flex-grow","children":["$","article",null,{"className":"relative z-20 w-[896px] mx-auto mt-32 mb-12","children":["$","div",null,{"className":"prose dark:prose-invert max-w-none","children":["$","div",null,{"dangerouslySetInnerHTML":{"__html":"$9"}}]}]}]}],["$","$La",null,{}]]}]

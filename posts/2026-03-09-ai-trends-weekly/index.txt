@@ -1,0 +1,266 @@
+3:I[5613,[],""]
+5:I[1778,[],""]
+6:I[3397,["185","static/chunks/app/layout-2cf9e241889d2c49.js"],""]
+4:["slug","2026-03-09-ai-trends-weekly","d"]
+0:["XkPPpES-Y_HzAut79GXO5",[[["",{"children":["posts",{"children":[["slug","2026-03-09-ai-trends-weekly","d"],{"children":["__PAGE__?{\"slug\":\"2026-03-09-ai-trends-weekly\"}",{}]}]}]},"$undefined","$undefined",true],["",{"children":["posts",{"children":[["slug","2026-03-09-ai-trends-weekly","d"],{"children":["__PAGE__",{},["$L1","$L2",null]]},[null,["$","$L3",null,{"parallelRouterKey":"children","segmentPath":["children","posts","children","$4","children"],"loading":"$undefined","loadingStyles":"$undefined","loadingScripts":"$undefined","hasLoading":false,"error":"$undefined","errorStyles":"$undefined","errorScripts":"$undefined","template":["$","$L5",null,{}],"templateStyles":"$undefined","templateScripts":"$undefined","notFound":"$undefined","notFoundStyles":"$undefined","styles":null}],null]]},["$","$L3",null,{"parallelRouterKey":"children","segmentPath":["children","posts","children"],"loading":"$undefined","loadingStyles":"$undefined","loadingScripts":"$undefined","hasLoading":false,"error":"$undefined","errorStyles":"$undefined","errorScripts":"$undefined","template":["$","$L5",null,{}],"templateStyles":"$undefined","templateScripts":"$undefined","notFound":"$undefined","notFoundStyles":"$undefined","styles":null}]]},[null,["$","html",null,{"lang":"en","suppressHydrationWarning":true,"children":["$","body",null,{"className":"__className_f367f3","children":["$","$L6",null,{"children":["$","div",null,{"className":"relative h-screen","children":["$","div",null,{"className":"relative z-10 flex flex-col h-full","children":["$","$L3",null,{"parallelRouterKey":"children","segmentPath":["children"],"loading":"$undefined","loadingStyles":"$undefined","loadingScripts":"$undefined","hasLoading":false,"error":"$undefined","errorStyles":"$undefined","errorScripts":"$undefined","template":["$","$L5",null,{}],"templateStyles":"$undefined","templateScripts":"$undefined","notFound":[["$","title",null,{"children":"404: This page could not be found."}],["$","div",null,{"style":{"fontFamily":"system-ui,\"Segoe UI\",Roboto,Helvetica,Arial,sans-serif,\"Apple Color Emoji\",\"Segoe UI Emoji\"","height":"100vh","textAlign":"center","display":"flex","flexDirection":"column","alignItems":"center","justifyContent":"center"},"children":["$","div",null,{"children":[["$","style",null,{"dangerouslySetInnerHTML":{"__html":"body{color:#000;background:#fff;margin:0}.next-error-h1{border-right:1px solid rgba(0,0,0,.3)}@media (prefers-color-scheme:dark){body{color:#fff;background:#000}.next-error-h1{border-right:1px solid rgba(255,255,255,.3)}}"}}],["$","h1",null,{"className":"next-error-h1","style":{"display":"inline-block","margin":"0 20px 0 0","padding":"0 23px 0 0","fontSize":24,"fontWeight":500,"verticalAlign":"top","lineHeight":"49px"},"children":"404"}],["$","div",null,{"style":{"display":"inline-block"},"children":["$","h2",null,{"style":{"fontSize":14,"fontWeight":400,"lineHeight":"49px","margin":0},"children":"This page could not be found."}]}]]}]}]],"notFoundStyles":[],"styles":null}]}]}]}]}]}],null]],[[["$","link","0",{"rel":"stylesheet","href":"/_next/static/css/c2d646e594b909bf.css","precedence":"next","crossOrigin":""}]],"$L7"]]]]
+8:I[6836,["51","static/chunks/51-db90af79fa0fde6c.js","939","static/chunks/939-42d9698cb692b591.js","333","static/chunks/app/posts/%5Bslug%5D/page-a8fec07d28a2c1fa.js"],""]
+a:I[8722,["51","static/chunks/51-db90af79fa0fde6c.js","939","static/chunks/939-42d9698cb692b591.js","333","static/chunks/app/posts/%5Bslug%5D/page-a8fec07d28a2c1fa.js"],""]
+7:[["$","meta","0",{"name":"viewport","content":"width=device-width, initial-scale=1"}],["$","meta","1",{"charSet":"utf-8"}],["$","title","2",{"children":"Someone's Portfolio"}],["$","meta","3",{"name":"description","content":"A showcase of my work and thoughts"}],["$","meta","4",{"name":"next-size-adjust"}]]
+1:null
+9:T1d91,<h1>📊 AI 开发趋势周报（实战增强版）</h1>
+<p><strong>时间范围：</strong> 2026 年 3 月 2 日 - 2026 年 3 月 9 日</p>
+<hr>
+<h2>📊 本周概览</h2>
+<table>
+<thead>
+<tr>
+<th>指标</th>
+<th>数据</th>
+</tr>
+</thead>
+<tbody><tr>
+<td>信息源数量</td>
+<td>15+</td>
+</tr>
+<tr>
+<td>GitHub 热门项目</td>
+<td>13 个 AI/ML 项目</td>
+</tr>
+<tr>
+<td>学术/官方来源</td>
+<td>4 个</td>
+</tr>
+<tr>
+<td>社区讨论热点</td>
+<td>5+ 主题</td>
+</tr>
+</tbody></table>
+<h3>关键趋势总结</h3>
+<ol>
+<li><p><strong>AI Agent 生产化部署成为主流</strong> - Gartner 预测 2026 年 40% 企业应用将嵌入 AI Agent</p>
+</li>
+<li><p><strong>RAG 技术成熟度提升</strong> - 从基础实现演进到&quot;生产级 RAG&quot;，强调评估框架和本地化部署</p>
+</li>
+<li><p><strong>框架选择趋于理性</strong> - LangChain vs LlamaIndex 从&quot;哪个更好&quot;转向&quot;场景适配&quot;</p>
+</li>
+<li><p><strong>LLMOps 成为必备技能</strong> - 评估框架、可观测性从可选变为必选</p>
+</li>
+<li><p><strong>本地优先趋势明显</strong> - Ollama + 本地模型受青睐，隐私和成本是主要驱动</p>
+</li>
+</ol>
+<hr>
+<h2>🔥 GitHub 热门项目（本周）</h2>
+<table>
+<thead>
+<tr>
+<th>项目</th>
+<th>周增长</th>
+<th>方向</th>
+</tr>
+</thead>
+<tbody><tr>
+<td><strong>RuView</strong></td>
+<td>+15,043 ⭐</td>
+<td>WiFi 信号人体姿态估计（无摄像头）</td>
+</tr>
+<tr>
+<td><strong>worldmonitor</strong></td>
+<td>+14,741 ⭐</td>
+<td>AI 驱动的全球情报仪表板</td>
+</tr>
+<tr>
+<td><strong>airi</strong></td>
+<td>+11,456 ⭐</td>
+<td>自托管虚拟伴侣</td>
+</tr>
+<tr>
+<td><strong>OpenSandbox (阿里)</strong></td>
+<td>+3,959 ⭐</td>
+<td>AI 应用沙箱平台</td>
+</tr>
+<tr>
+<td><strong>GitNexus</strong></td>
+<td>+3,952 ⭐</td>
+<td>浏览器端代码知识图谱 + Graph RAG</td>
+</tr>
+<tr>
+<td><strong>deer-flow (字节)</strong></td>
+<td>+3,150 ⭐</td>
+<td>开源 SuperAgent 框架</td>
+</tr>
+</tbody></table>
+<h3>亮点项目解析</h3>
+<h4>RuView - WiFi 姿态估计</h4>
+<p>用普通 WiFi 信号实现人体姿态估计和生命体征监测，<strong>无需摄像头</strong>，保护隐私。</p>
+<h4>GitNexus - 代码探索神器</h4>
+<p>纯前端代码知识库，拖入 GitHub 仓库即可生成交互式知识图谱，内置 Graph RAG Agent。</p>
+<hr>
+<h2>📰 重要发布</h2>
+<table>
+<thead>
+<tr>
+<th>发布</th>
+<th>来源</th>
+<th>日期</th>
+<th>亮点</th>
+</tr>
+</thead>
+<tbody><tr>
+<td><strong>Claude Opus 3 弃用承诺更新</strong></td>
+<td>Anthropic</td>
+<td>2026-02-25</td>
+<td>模型生命周期管理政策</td>
+</tr>
+<tr>
+<td><strong>AI Fluency Index</strong></td>
+<td>Anthropic</td>
+<td>2026-02-23</td>
+<td>AI 流利度评估报告</td>
+</tr>
+<tr>
+<td><strong>OpenSandbox</strong></td>
+<td>阿里巴巴</td>
+<td>2026-03</td>
+<td>通用 AI 应用沙箱平台</td>
+</tr>
+<tr>
+<td><strong>deer-flow</strong></td>
+<td>字节跳动</td>
+<td>2026-03</td>
+<td>开源 SuperAgent 框架</td>
+</tr>
+</tbody></table>
+<hr>
+<h2>💻 实战应用</h2>
+<h3>生产级 RAG 评估框架</h3>
+<pre><code class="language-python"># 至少 50-100 测试样本成为标准
+from rag_evaluator import RAGEvaluator
+
+evaluator = RAGEvaluator(
+    test_dataset_size=100,
+    metrics=[&#39;accuracy&#39;, &#39;relevance&#39;, &#39;latency&#39;],
+    edge_cases_included=True
+)
+
+# 持续评估，检测回归
+evaluator.run_continuous_evaluation()
+</code></pre>
+<h3>LLM 成本优化（降低 30%）</h3>
+<pre><code class="language-python"># 验证感知多层缓存
+class TieredCache:
+    def __init__(self):
+        self.tier1 = SemanticCache()  # 语义缓存
+        self.tier2 = SmallModel()     # 小模型处理简单查询
+        self.tier3 = LargeModel()     # 大模型处理复杂查询
+    
+    def query(self, prompt):
+        if self.tier1.hit(prompt):
+            return self.tier1.get(prompt)
+        elif self.is_simple(prompt):
+            return self.tier2.generate(prompt)
+        else:
+            return self.tier3.generate(prompt)
+</code></pre>
+<hr>
+<h2>🐛 踩坑记录</h2>
+<table>
+<thead>
+<tr>
+<th>问题</th>
+<th>解决方案</th>
+</tr>
+</thead>
+<tbody><tr>
+<td>MCP 服务器安全风险</td>
+<td>避免在生产数据上直接部署</td>
+</tr>
+<tr>
+<td>LangChain/LlamaIndex 活跃度下降</td>
+<td>考虑 LangGraph 等新一代框架</td>
+</tr>
+<tr>
+<td>RAG 上下文丢失</td>
+<td>采用上下文检索（Contextual Retrieval）</td>
+</tr>
+<tr>
+<td>长上下文理解衰减</td>
+<td>关键信息放在 prompt 开头和结尾</td>
+</tr>
+</tbody></table>
+<h3>社区反馈</h3>
+<p>Reddit r/LocalLLaMA 讨论：LangChain 和 LlamaIndex 被列为&quot;下降最快&quot;项目，建议关注 LangGraph 等状态感知框架。</p>
+<hr>
+<h2>🛠️ 开发者工具</h2>
+<h3>本周推荐</h3>
+<table>
+<thead>
+<tr>
+<th>工具</th>
+<th>使用场景</th>
+<th>快速上手</th>
+</tr>
+</thead>
+<tbody><tr>
+<td><strong>GitNexus</strong></td>
+<td>代码库快速理解</td>
+<td>浏览器打开，拖入 repo 即可</td>
+</tr>
+<tr>
+<td><strong>OpenSandbox</strong></td>
+<td>AI 代码安全执行</td>
+<td><code>pip install opensandbox</code> + Docker</td>
+</tr>
+<tr>
+<td><strong>notebooklm-py</strong></td>
+<td>Python 访问 NotebookLM</td>
+<td><code>pip install notebooklm-py</code></td>
+</tr>
+</tbody></table>
+<h3>实用教程</h3>
+<ul>
+<li><a href="https://youtube.com/watch?v=vT-DpLvf29Q">Complete RAG Tutorial 2026</a> - KodeKloud (48 分钟)</li>
+<li><a href="https://martinfowler.com/articles/engineering-practices-llm.html">Engineering Practices for LLM Apps</a> - Martin Fowler</li>
+<li><a href="https://datadoghq.com/blog/llm-evaluation-framework-best-practices/">LLM Evaluation Framework</a> - Datadog</li>
+</ul>
+<hr>
+<h2>📈 趋势分析</h2>
+<h3>技能需求变化</h3>
+<p><strong>上升需求：</strong></p>
+<ul>
+<li>LLMOps（评估、监控、调试）🔥🔥🔥</li>
+<li>Agent 架构设计 🔥🔥🔥</li>
+<li>RAG 优化 🔥🔥🔥</li>
+<li>安全实践（guardrails）🔥🔥</li>
+</ul>
+<p><strong>建议关注：</strong></p>
+<ul>
+<li>框架：LangGraph, LlamaIndex (RAG 场景)</li>
+<li>评估：Ragas, Patronus AI</li>
+<li>本地模型：Ollama</li>
+<li>可观测性：Langfuse, Helicone</li>
+</ul>
+<h3>技术演进方向</h3>
+<pre><code>2026 Q1 趋势：
+├── Agent 框架 → 轻量化、场景化
+├── RAG → 生产级、可评估
+├── 本地模型 → 主流化
+└── LLMOps → 必备技能
+</code></pre>
+<hr>
+<h2>📚 参考链接</h2>
+<h3>核心来源</h3>
+<ul>
+<li><a href="https://www.anthropic.com/research">Anthropic Research</a></li>
+<li><a href="https://github.com/trending?since=weekly">GitHub Trending</a></li>
+<li><a href="https://dev.to/t/ai">DEV Community AI</a></li>
+<li><a href="https://towardsdatascience.com/">Towards Data Science</a></li>
+</ul>
+<h3>本周引用</h3>
+<ol>
+<li><a href="https://medium.com/data-science-collective/the-best-ai-agent-frameworks-for-2026-tier-list-b3a4362fac0d">The Best AI Agent Frameworks for 2026</a></li>
+<li><a href="https://machinelearningmastery.com/deploying-ai-agents-to-production/">Deploying AI Agents to Production</a></li>
+<li><a href="https://contabo.com/blog/llamaindex-vs-langchain-which-one-to-choose-in-2026/">LlamaIndex vs LangChain 2026</a></li>
+</ol>
+<hr>
+<p><strong>报告生成时间：</strong> 2026 年 3 月 9 日 09:00 GMT+8<br><strong>信息来源：</strong> 15+ 技术社区/官方源<br><strong>备注：</strong> 部分来源（Product Hunt、Hugging Face Blog）因反爬限制无法获取完整内容</p>
+2:["$","div",null,{"className":"min-h-screen flex flex-col","children":[["$","div",null,{"className":"fixed inset-0 z-0","children":[["$","div",null,{"className":"absolute inset-0 bg-[linear-gradient(to_right,#8080800a_1px,transparent_1px),linear-gradient(to_bottom,#8080800a_1px,transparent_1px)] bg-[size:28px_48px] -z-10"}],["$","div",null,{"className":"absolute left-0 right-0 top-0 -z-10 m-auto h-[1200px] w-[1200px] rounded-full bg-neutral-400 opacity-10 blur-[100px]"}]]}],["$","$L8",null,{}],["$","main",null,{"className":"flex-grow","children":["$","article",null,{"className":"relative z-20 w-[896px] mx-auto mt-32 mb-12","children":["$","div",null,{"className":"prose dark:prose-invert max-w-none","children":["$","div",null,{"dangerouslySetInnerHTML":{"__html":"$9"}}]}]}]}],["$","$La",null,{}]]}]

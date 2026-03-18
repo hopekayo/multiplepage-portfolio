@@ -1,0 +1,68 @@
+3:I[5613,[],""]
+5:I[1778,[],""]
+6:I[3397,["185","static/chunks/app/layout-2cf9e241889d2c49.js"],""]
+4:["slug","2026-03-10-openclaw-course-outline","d"]
+0:["XkPPpES-Y_HzAut79GXO5",[[["",{"children":["posts",{"children":[["slug","2026-03-10-openclaw-course-outline","d"],{"children":["__PAGE__?{\"slug\":\"2026-03-10-openclaw-course-outline\"}",{}]}]}]},"$undefined","$undefined",true],["",{"children":["posts",{"children":[["slug","2026-03-10-openclaw-course-outline","d"],{"children":["__PAGE__",{},["$L1","$L2",null]]},[null,["$","$L3",null,{"parallelRouterKey":"children","segmentPath":["children","posts","children","$4","children"],"loading":"$undefined","loadingStyles":"$undefined","loadingScripts":"$undefined","hasLoading":false,"error":"$undefined","errorStyles":"$undefined","errorScripts":"$undefined","template":["$","$L5",null,{}],"templateStyles":"$undefined","templateScripts":"$undefined","notFound":"$undefined","notFoundStyles":"$undefined","styles":null}],null]]},["$","$L3",null,{"parallelRouterKey":"children","segmentPath":["children","posts","children"],"loading":"$undefined","loadingStyles":"$undefined","loadingScripts":"$undefined","hasLoading":false,"error":"$undefined","errorStyles":"$undefined","errorScripts":"$undefined","template":["$","$L5",null,{}],"templateStyles":"$undefined","templateScripts":"$undefined","notFound":"$undefined","notFoundStyles":"$undefined","styles":null}]]},[null,["$","html",null,{"lang":"en","suppressHydrationWarning":true,"children":["$","body",null,{"className":"__className_f367f3","children":["$","$L6",null,{"children":["$","div",null,{"className":"relative h-screen","children":["$","div",null,{"className":"relative z-10 flex flex-col h-full","children":["$","$L3",null,{"parallelRouterKey":"children","segmentPath":["children"],"loading":"$undefined","loadingStyles":"$undefined","loadingScripts":"$undefined","hasLoading":false,"error":"$undefined","errorStyles":"$undefined","errorScripts":"$undefined","template":["$","$L5",null,{}],"templateStyles":"$undefined","templateScripts":"$undefined","notFound":[["$","title",null,{"children":"404: This page could not be found."}],["$","div",null,{"style":{"fontFamily":"system-ui,\"Segoe UI\",Roboto,Helvetica,Arial,sans-serif,\"Apple Color Emoji\",\"Segoe UI Emoji\"","height":"100vh","textAlign":"center","display":"flex","flexDirection":"column","alignItems":"center","justifyContent":"center"},"children":["$","div",null,{"children":[["$","style",null,{"dangerouslySetInnerHTML":{"__html":"body{color:#000;background:#fff;margin:0}.next-error-h1{border-right:1px solid rgba(0,0,0,.3)}@media (prefers-color-scheme:dark){body{color:#fff;background:#000}.next-error-h1{border-right:1px solid rgba(255,255,255,.3)}}"}}],["$","h1",null,{"className":"next-error-h1","style":{"display":"inline-block","margin":"0 20px 0 0","padding":"0 23px 0 0","fontSize":24,"fontWeight":500,"verticalAlign":"top","lineHeight":"49px"},"children":"404"}],["$","div",null,{"style":{"display":"inline-block"},"children":["$","h2",null,{"style":{"fontSize":14,"fontWeight":400,"lineHeight":"49px","margin":0},"children":"This page could not be found."}]}]]}]}]],"notFoundStyles":[],"styles":null}]}]}]}]}]}],null]],[[["$","link","0",{"rel":"stylesheet","href":"/_next/static/css/c2d646e594b909bf.css","precedence":"next","crossOrigin":""}]],"$L7"]]]]
+7:[["$","meta","0",{"name":"viewport","content":"width=device-width, initial-scale=1"}],["$","meta","1",{"charSet":"utf-8"}],["$","title","2",{"children":"Someone's Portfolio"}],["$","meta","3",{"name":"description","content":"A showcase of my work and thoughts"}],["$","meta","4",{"name":"next-size-adjust"}]]
+1:null
+8:I[6836,["51","static/chunks/51-db90af79fa0fde6c.js","939","static/chunks/939-42d9698cb692b591.js","333","static/chunks/app/posts/%5Bslug%5D/page-a8fec07d28a2c1fa.js"],""]
+a:I[8722,["51","static/chunks/51-db90af79fa0fde6c.js","939","static/chunks/939-42d9698cb692b591.js","333","static/chunks/app/posts/%5Bslug%5D/page-a8fec07d28a2c1fa.js"],""]
+9:T6d0,<h1>OpenClaw 安装使用与风险 - 课程大纲</h1>
+<h2>一、OpenClaw 是什么</h2>
+<ul>
+<li>定义与对比</li>
+<li>现场演示</li>
+</ul>
+<h2>二、安装与配置</h2>
+<ul>
+<li>安装方式概览</li>
+<li>Windows 安装（前置准备、安装、启动）</li>
+<li>macOS/Linux 安装</li>
+<li>配置模型 API Key</li>
+<li>对接 QQBot</li>
+<li>对接飞书</li>
+<li>核心配置说明</li>
+</ul>
+<h2>三、核心功能演示</h2>
+<ul>
+<li>功能概览</li>
+<li>对话与任务演示</li>
+<li>记忆系统（演示 + 架构）</li>
+<li>定时任务（演示 + 示例）</li>
+<li>心跳机制（概念 + 配置 + 演示）</li>
+<li>技能扩展（演示 + 目录结构 + 触发逻辑）</li>
+</ul>
+<h2>四、企业应用场景</h2>
+<ul>
+<li>自动日报</li>
+<li>智能客服</li>
+<li>文档助手</li>
+</ul>
+<h2>五、安全风险</h2>
+<ul>
+<li>权限边界</li>
+<li>数据隐私</li>
+<li>最佳实践</li>
+<li>企业部署建议</li>
+<li>安全检查清单</li>
+</ul>
+<h2>六、类似软件对比</h2>
+<ul>
+<li>国内产品对比（CoPaw、LobsterAI、KeyVox、实在 Agent、Molili、QoderWork）</li>
+<li>开源项目对比（Nanobot、ZeroClaw、PicoClaw、Moltis、ClawWork）</li>
+</ul>
+<h2>七、总结与问答</h2>
+<ul>
+<li>参考资料 &amp; Q&amp;A</li>
+</ul>
+<hr>
+<h2>参考资料</h2>
+<ul>
+<li><strong>官方文档</strong>：<a href="https://docs.openclaw.ai">docs.openclaw.ai</a></li>
+<li><strong>社区</strong>：<a href="https://discord.com/invite/clawd">Discord</a></li>
+<li><strong>技能市场</strong>：<a href="https://clawhub.com">clawhub.com</a></li>
+<li><strong>GitHub</strong>：<a href="https://github.com/openclaw/openclaw">openclaw/openclaw</a></li>
+</ul>
+<hr>
+<p><em>最后更新：2026-03-10</em></p>
+2:["$","div",null,{"className":"min-h-screen flex flex-col","children":[["$","div",null,{"className":"fixed inset-0 z-0","children":[["$","div",null,{"className":"absolute inset-0 bg-[linear-gradient(to_right,#8080800a_1px,transparent_1px),linear-gradient(to_bottom,#8080800a_1px,transparent_1px)] bg-[size:28px_48px] -z-10"}],["$","div",null,{"className":"absolute left-0 right-0 top-0 -z-10 m-auto h-[1200px] w-[1200px] rounded-full bg-neutral-400 opacity-10 blur-[100px]"}]]}],["$","$L8",null,{}],["$","main",null,{"className":"flex-grow","children":["$","article",null,{"className":"relative z-20 w-[896px] mx-auto mt-32 mb-12","children":["$","div",null,{"className":"prose dark:prose-invert max-w-none","children":["$","div",null,{"dangerouslySetInnerHTML":{"__html":"$9"}}]}]}]}],["$","$La",null,{}]]}]

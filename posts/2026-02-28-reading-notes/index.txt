@@ -1,0 +1,51 @@
+3:I[5613,[],""]
+5:I[1778,[],""]
+6:I[3397,["185","static/chunks/app/layout-2cf9e241889d2c49.js"],""]
+4:["slug","2026-02-28-reading-notes","d"]
+0:["XkPPpES-Y_HzAut79GXO5",[[["",{"children":["posts",{"children":[["slug","2026-02-28-reading-notes","d"],{"children":["__PAGE__?{\"slug\":\"2026-02-28-reading-notes\"}",{}]}]}]},"$undefined","$undefined",true],["",{"children":["posts",{"children":[["slug","2026-02-28-reading-notes","d"],{"children":["__PAGE__",{},["$L1","$L2",null]]},[null,["$","$L3",null,{"parallelRouterKey":"children","segmentPath":["children","posts","children","$4","children"],"loading":"$undefined","loadingStyles":"$undefined","loadingScripts":"$undefined","hasLoading":false,"error":"$undefined","errorStyles":"$undefined","errorScripts":"$undefined","template":["$","$L5",null,{}],"templateStyles":"$undefined","templateScripts":"$undefined","notFound":"$undefined","notFoundStyles":"$undefined","styles":null}],null]]},["$","$L3",null,{"parallelRouterKey":"children","segmentPath":["children","posts","children"],"loading":"$undefined","loadingStyles":"$undefined","loadingScripts":"$undefined","hasLoading":false,"error":"$undefined","errorStyles":"$undefined","errorScripts":"$undefined","template":["$","$L5",null,{}],"templateStyles":"$undefined","templateScripts":"$undefined","notFound":"$undefined","notFoundStyles":"$undefined","styles":null}]]},[null,["$","html",null,{"lang":"en","suppressHydrationWarning":true,"children":["$","body",null,{"className":"__className_f367f3","children":["$","$L6",null,{"children":["$","div",null,{"className":"relative h-screen","children":["$","div",null,{"className":"relative z-10 flex flex-col h-full","children":["$","$L3",null,{"parallelRouterKey":"children","segmentPath":["children"],"loading":"$undefined","loadingStyles":"$undefined","loadingScripts":"$undefined","hasLoading":false,"error":"$undefined","errorStyles":"$undefined","errorScripts":"$undefined","template":["$","$L5",null,{}],"templateStyles":"$undefined","templateScripts":"$undefined","notFound":[["$","title",null,{"children":"404: This page could not be found."}],["$","div",null,{"style":{"fontFamily":"system-ui,\"Segoe UI\",Roboto,Helvetica,Arial,sans-serif,\"Apple Color Emoji\",\"Segoe UI Emoji\"","height":"100vh","textAlign":"center","display":"flex","flexDirection":"column","alignItems":"center","justifyContent":"center"},"children":["$","div",null,{"children":[["$","style",null,{"dangerouslySetInnerHTML":{"__html":"body{color:#000;background:#fff;margin:0}.next-error-h1{border-right:1px solid rgba(0,0,0,.3)}@media (prefers-color-scheme:dark){body{color:#fff;background:#000}.next-error-h1{border-right:1px solid rgba(255,255,255,.3)}}"}}],["$","h1",null,{"className":"next-error-h1","style":{"display":"inline-block","margin":"0 20px 0 0","padding":"0 23px 0 0","fontSize":24,"fontWeight":500,"verticalAlign":"top","lineHeight":"49px"},"children":"404"}],["$","div",null,{"style":{"display":"inline-block"},"children":["$","h2",null,{"style":{"fontSize":14,"fontWeight":400,"lineHeight":"49px","margin":0},"children":"This page could not be found."}]}]]}]}]],"notFoundStyles":[],"styles":null}]}]}]}]}]}],null]],[[["$","link","0",{"rel":"stylesheet","href":"/_next/static/css/c2d646e594b909bf.css","precedence":"next","crossOrigin":""}]],"$L7"]]]]
+7:[["$","meta","0",{"name":"viewport","content":"width=device-width, initial-scale=1"}],["$","meta","1",{"charSet":"utf-8"}],["$","title","2",{"children":"Someone's Portfolio"}],["$","meta","3",{"name":"description","content":"A showcase of my work and thoughts"}],["$","meta","4",{"name":"next-size-adjust"}]]
+1:null
+8:I[6836,["51","static/chunks/51-db90af79fa0fde6c.js","939","static/chunks/939-42d9698cb692b591.js","333","static/chunks/app/posts/%5Bslug%5D/page-a8fec07d28a2c1fa.js"],""]
+a:I[8722,["51","static/chunks/51-db90af79fa0fde6c.js","939","static/chunks/939-42d9698cb692b591.js","333","static/chunks/app/posts/%5Bslug%5D/page-a8fec07d28a2c1fa.js"],""]
+9:T8f0,<h1>移民思考与身份认同 - 阅读笔记</h1>
+<p><strong>日期：</strong> 2026-02-28<br><strong>来源：</strong> 腾讯文档</p>
+<hr>
+<h2>核心观点整理</h2>
+<h3>文档一：《凭什么&quot;在中国是中国人，在美国是美国人&quot;？》</h3>
+<p><strong>核心论点：</strong> 心态决定生活质量——在哪个国家就多看那个国家好的一面，这是&quot;顶级的生活智慧&quot;。</p>
+<p><strong>主要观点：</strong></p>
+<ul>
+<li>引用谷爱凌名言回应国籍问题，强调身份认同的灵活性</li>
+<li>作者经过 3 年全球见闻后，<strong>想润的冲动在下降</strong></li>
+<li>基于实用主义权衡利弊，走一步看一步</li>
+<li>承认现有体制是&quot;一体两面&quot;：优势与风险同源</li>
+<li>有&quot;赌国运&quot;成分，但目前看<strong>赌赢的概率在上升</strong></li>
+<li>墙内说话有约束，不好的方面只能&quot;旁敲侧击，点到为止&quot;</li>
+</ul>
+<hr>
+<h3>文档二：《想润的冲动，在下降......》</h3>
+<p><strong>润的两大动机：</strong></p>
+<ol>
+<li><strong>赚更多钱</strong> —— 国内赚钱能力不足，出国套利，无永居打算</li>
+<li><strong>过更好生活</strong> —— 作者属于此类（2022 年 6 月达到想润峰值）</li>
+</ol>
+<p><strong>想润的 6 大理由：</strong></p>
+<ol>
+<li>更好的社会治安</li>
+<li>更稳定的物价</li>
+<li>更完善的基础设施、公共服务、医疗保障</li>
+<li>更自由的政治、经济、文化、言论、信仰空间和更公平的法治环境</li>
+<li>更好的生态和气候</li>
+<li>更好的生活质量</li>
+</ol>
+<p><strong>关键转折：</strong></p>
+<ul>
+<li>作者后疫情时代 2 年去了 84 个地方，累计 211 个景点，走遍七大洲五大洋</li>
+<li><strong>反直觉的结论：</strong> 去的地方越多，越想润的冲动反而下降</li>
+<li>隐含意思：经过全球对比后，对中国的看法有所改变</li>
+</ul>
+<hr>
+<h2>两篇共同主题</h2>
+<p><strong>&quot;看过世界后，反而没那么想走了&quot;</strong> —— 作者通过大量实地旅行对比，原本强烈的移民冲动在减弱，但这不代表完全放弃润的想法，而是基于更多信息后的理性权衡。</p>
+<hr>
+2:["$","div",null,{"className":"min-h-screen flex flex-col","children":[["$","div",null,{"className":"fixed inset-0 z-0","children":[["$","div",null,{"className":"absolute inset-0 bg-[linear-gradient(to_right,#8080800a_1px,transparent_1px),linear-gradient(to_bottom,#8080800a_1px,transparent_1px)] bg-[size:28px_48px] -z-10"}],["$","div",null,{"className":"absolute left-0 right-0 top-0 -z-10 m-auto h-[1200px] w-[1200px] rounded-full bg-neutral-400 opacity-10 blur-[100px]"}]]}],["$","$L8",null,{}],["$","main",null,{"className":"flex-grow","children":["$","article",null,{"className":"relative z-20 w-[896px] mx-auto mt-32 mb-12","children":["$","div",null,{"className":"prose dark:prose-invert max-w-none","children":["$","div",null,{"dangerouslySetInnerHTML":{"__html":"$9"}}]}]}]}],["$","$La",null,{}]]}]

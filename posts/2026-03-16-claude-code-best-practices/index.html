@@ -1,0 +1,567 @@
+<!DOCTYPE html><html lang="en"><head><meta charSet="utf-8"/><meta name="viewport" content="width=device-width, initial-scale=1"/><link rel="preload" href="/_next/static/media/e4af272ccee01ff0-s.p.woff2" as="font" crossorigin="" type="font/woff2"/><link rel="stylesheet" href="/_next/static/css/c2d646e594b909bf.css" crossorigin="" data-precedence="next"/><link rel="preload" as="script" fetchPriority="low" href="/_next/static/chunks/webpack-c3abfac567409070.js" crossorigin=""/><script src="/_next/static/chunks/fd9d1056-41b0b404dc7c4c15.js" async="" crossorigin=""></script><script src="/_next/static/chunks/69-8d659b4e94c9e034.js" async="" crossorigin=""></script><script src="/_next/static/chunks/main-app-8d61c2676eb5d54d.js" async="" crossorigin=""></script><script src="/_next/static/chunks/app/layout-2cf9e241889d2c49.js" async=""></script><script src="/_next/static/chunks/51-db90af79fa0fde6c.js" async=""></script><script src="/_next/static/chunks/939-42d9698cb692b591.js" async=""></script><script src="/_next/static/chunks/app/posts/%5Bslug%5D/page-a8fec07d28a2c1fa.js" async=""></script><title>Someone&#x27;s Portfolio</title><meta name="description" content="A showcase of my work and thoughts"/><meta name="next-size-adjust"/><script src="/_next/static/chunks/polyfills-c67a75d1b6f99dc8.js" crossorigin="" noModule=""></script></head><body class="__className_f367f3"><script>((e,t,r,n,o,a,l,i)=>{let u=document.documentElement,s=["light","dark"];function c(t){(Array.isArray(e)?e:[e]).forEach(e=>{let r="class"===e,n=r&&a?o.map(e=>a[e]||e):o;r?(u.classList.remove(...n),u.classList.add(a&&a[t]?a[t]:t)):u.setAttribute(e,t)}),i&&s.includes(t)&&(u.style.colorScheme=t)}if(n)c(n);else try{let e=localStorage.getItem(t)||r,n=l&&"system"===e?window.matchMedia("(prefers-color-scheme: dark)").matches?"dark":"light":e;c(n)}catch(e){}})("class","theme","dark",null,["light","dark"],null,true,true)</script><div class="relative h-screen"><div class="relative z-10 flex flex-col h-full"><div class="min-h-screen flex flex-col"><div class="fixed inset-0 z-0"><div class="absolute inset-0 bg-[linear-gradient(to_right,#8080800a_1px,transparent_1px),linear-gradient(to_bottom,#8080800a_1px,transparent_1px)] bg-[size:28px_48px] -z-10"></div><div class="absolute left-0 right-0 top-0 -z-10 m-auto h-[1200px] w-[1200px] rounded-full bg-neutral-400 opacity-10 blur-[100px]"></div></div><main class="flex-grow"><article class="relative z-20 w-[896px] mx-auto mt-32 mb-12"><div class="prose dark:prose-invert max-w-none"><div><h1>🎯 Claude Code 最佳实践指南</h1>
+<p><strong>版本：</strong> 2026 年 3 月<br><strong>适用对象：</strong> 想要高效使用 Claude Code 的开发者<br><strong>前置条件：</strong> 已安装 Claude Code (<code>claude</code> 命令可用)</p>
+<hr>
+<h2>📚 目录</h2>
+<ol>
+<li><a href="#%E5%BF%AB%E9%80%9F%E5%85%A5%E9%97%A8">快速入门</a></li>
+<li><a href="#%E6%A0%B8%E5%BF%83%E5%8A%9F%E8%83%BD%E8%AF%A6%E8%A7%A3">核心功能详解</a></li>
+<li><a href="#%E9%AB%98%E6%95%88%E4%BD%BF%E7%94%A8%E6%8A%80%E5%B7%A7">高效使用技巧</a></li>
+<li><a href="#%E5%AE%9E%E6%88%98%E5%9C%BA%E6%99%AF">实战场景</a></li>
+<li><a href="#%E6%8F%90%E7%A4%BA%E8%AF%8D%E6%9C%80%E4%BD%B3%E5%AE%9E%E8%B7%B5">提示词最佳实践</a></li>
+<li><a href="#%E5%B8%B8%E8%A7%81%E9%99%B7%E9%98%B1%E4%B8%8E%E9%81%BF%E5%85%8D%E6%96%B9%E6%B3%95">常见陷阱与避免方法</a></li>
+<li><a href="#%E9%AB%98%E7%BA%A7%E5%8A%9F%E8%83%BD">高级功能</a></li>
+<li><a href="#%E5%AD%A6%E4%B9%A0%E8%B5%84%E6%BA%90">学习资源</a></li>
+</ol>
+<hr>
+<h2>🚀 快速入门</h2>
+<h3>安装确认</h3>
+<pre><code class="language-bash"># 检查是否已安装
+claude --version
+
+# 查看帮助
+claude --help
+</code></pre>
+<h3>启动方式</h3>
+<pre><code class="language-bash"># 方式 1：在项目目录中直接运行
+cd /path/to/your/project
+claude
+
+# 方式 2：指定目录启动
+claude /path/to/project
+
+# 方式 3：使用别名（推荐）
+# 在 ~/.zshrc 中添加：
+alias cc=&#39;claude&#39;
+</code></pre>
+<h3>首次使用</h3>
+<pre><code class="language-bash"># 1. 登录（如未登录）
+claude login
+
+# 2. 开始对话
+claude
+
+# 3. 输入你的第一个任务
+&quot;帮我分析这个项目的结构&quot;
+</code></pre>
+<hr>
+<h2>🛠️ 核心功能详解</h2>
+<h3>1. 代码理解与分析</h3>
+<h4>项目探索</h4>
+<pre><code class="language-bash"># 让 Claude 分析项目结构
+&quot;分析这个项目的目录结构，解释每个主要目录的用途&quot;
+
+# 理解特定文件
+&quot;解释 src/utils/auth.ts 文件的功能和实现逻辑&quot;
+
+# 查找相关代码
+&quot;找出所有与用户认证相关的代码文件&quot;
+</code></pre>
+<h4>代码解释</h4>
+<pre><code class="language-bash"># 逐行解释复杂函数
+&quot;逐行解释这个函数的逻辑，指出关键设计决策&quot;
+
+# 识别设计模式
+&quot;这段代码使用了哪些设计模式？为什么这样设计？&quot;
+
+# 理解依赖关系
+&quot;画出这个模块的依赖关系图&quot;
+</code></pre>
+<h3>2. 代码生成与修改</h3>
+<h4>创建新文件</h4>
+<pre><code class="language-bash"># 创建完整的功能模块
+&quot;创建一个用户注册 API 端点，包含：
+- 输入验证
+- 密码加密
+- 邮箱验证
+- 错误处理
+使用 TypeScript + Express&quot;
+
+# 生成测试文件
+&quot;为 src/services/user.service.ts 生成完整的单元测试&quot;
+</code></pre>
+<h4>修改现有代码</h4>
+<pre><code class="language-bash"># 重构代码
+&quot;重构这个函数，使其更符合 SOLID 原则&quot;
+
+# 添加功能
+&quot;在这个组件中添加搜索过滤功能&quot;
+
+# 性能优化
+&quot;优化这个数据库查询，减少 N+1 问题&quot;
+</code></pre>
+<h3>3. Git 工作流</h3>
+<h4>日常 Git 操作</h4>
+<pre><code class="language-bash"># 智能提交
+&quot;帮我提交刚才的修改，写一个清晰的 commit message&quot;
+
+# 查看变更
+&quot;总结我这次分支的所有改动&quot;
+
+# 解决冲突
+&quot;帮我解决这个合并冲突，保留两个分支的关键改动&quot;
+</code></pre>
+<h4>Git 最佳实践</h4>
+<pre><code class="language-bash"># 创建特性分支
+&quot;基于 main 创建一个新分支，用于实现用户个人资料功能&quot;
+
+# 代码审查准备
+&quot;生成一个 PR 描述，列出主要改动和测试要点&quot;
+
+# 回滚操作
+&quot;安全地回滚上一个提交，保留工作副本&quot;
+</code></pre>
+<h3>4. 调试与问题排查</h3>
+<h4>错误诊断</h4>
+<pre><code class="language-bash"># 分析错误信息
+&quot;这个错误是什么意思？如何修复？
+[粘贴错误堆栈]&quot;
+
+# 定位 bug
+&quot;找出导致这个测试失败的代码位置&quot;
+
+# 性能问题
+&quot;分析这个函数的性能瓶颈&quot;
+</code></pre>
+<h4>日志分析</h4>
+<pre><code class="language-bash"># 添加调试日志
+&quot;在这个函数中添加详细的调试日志&quot;
+
+# 分析日志输出
+&quot;分析这些日志，找出问题根源&quot;
+</code></pre>
+<hr>
+<h2>⚡ 高效使用技巧</h2>
+<h3>1. 上下文管理</h3>
+<h4>保持上下文清晰</h4>
+<pre><code class="language-bash"># ✅ 好：明确的任务描述
+&quot;重构用户认证模块，目标是：
+1. 提高代码可读性
+2. 减少重复代码
+3. 添加类型定义
+先分析现有代码，然后给出重构方案&quot;
+
+# ❌ 差：模糊的请求
+&quot;帮我改进这个代码&quot;
+</code></pre>
+<h4>分步执行复杂任务</h4>
+<pre><code class="language-bash"># 第一步：分析
+&quot;先分析这个项目的架构，不要修改代码&quot;
+
+# 第二步：规划
+&quot;基于分析，给出改进建议，按优先级排序&quot;
+
+# 第三步：执行
+&quot;现在开始实现第一个建议&quot;
+</code></pre>
+<h3>2. 使用快捷命令</h3>
+<pre><code class="language-bash"># /help - 查看所有可用命令
+# /clear - 清除当前对话历史
+# /exit - 退出 Claude Code
+# /bug - 报告问题
+# /feedback - 提供反馈
+</code></pre>
+<h3>3. 文件引用技巧</h3>
+<pre><code class="language-bash"># 引用特定文件
+&quot;查看 @src/components/Button.tsx 和 @src/styles/button.css，
+然后统一这两个文件的样式定义&quot;
+
+# 引用多个文件
+&quot;对比 @file1.ts 和 @file2.ts 的实现差异&quot;
+
+# 引用目录
+&quot;分析 @src/utils/ 目录下所有工具函数的使用模式&quot;
+</code></pre>
+<h3>4. 迭代式开发</h3>
+<pre><code class="language-bash"># 第一轮：原型
+&quot;创建一个简单的待办事项组件，只需要基本功能&quot;
+
+# 第二轮：增强
+&quot;现在添加以下功能：
+- 拖拽排序
+- 分类标签
+- 截止日期&quot;
+
+# 第三轮：优化
+&quot;优化性能，添加 memoization 和虚拟滚动&quot;
+</code></pre>
+<hr>
+<h2>🎬 实战场景</h2>
+<h3>场景 1：接手新项目</h3>
+<pre><code class="language-bash"># 第 1 步：项目概览
+&quot;快速浏览这个项目，告诉我：
+1. 使用什么技术栈？
+2. 项目结构是怎样的？
+3. 主要的业务模块有哪些？&quot;
+
+# 第 2 步：深入理解
+&quot;解释这个项目的数据流是如何工作的&quot;
+
+# 第 3 步：环境搭建
+&quot;帮我生成一个环境搭建指南，包括所有必要的安装步骤&quot;
+
+# 第 4 步：识别改进点
+&quot;基于最佳实践，这个项目有哪些可以改进的地方？&quot;
+</code></pre>
+<h3>场景 2：实现新功能</h3>
+<pre><code class="language-bash"># 第 1 步：需求分析
+&quot;我需要实现一个用户通知系统，需求如下：
+[描述需求]
+帮我设计技术方案&quot;
+
+# 第 2 步：架构设计
+&quot;画出这个功能的架构图，说明各个组件的职责&quot;
+
+# 第 3 步：分步实现
+&quot;我们先实现核心通知服务，然后再做 UI 组件&quot;
+
+# 第 4 步：测试
+&quot;生成完整的测试用例，包括边界情况&quot;
+</code></pre>
+<h3>场景 3：代码审查</h3>
+<pre><code class="language-bash"># 审查自己的代码
+&quot;审查我刚才写的代码，找出：
+1. 潜在 bug
+2. 性能问题
+3. 代码异味
+4. 安全漏洞&quot;
+
+# 准备 PR
+&quot;帮我写一个 PR 描述，包括：
+- 改动概述
+- 技术细节
+- 测试方法
+- 可能的影响&quot;
+</code></pre>
+<h3>场景 4：学习新技术</h3>
+<pre><code class="language-bash"># 概念理解
+&quot;用简单的例子解释 React Server Components 的工作原理&quot;
+
+# 实践应用
+&quot;给我一个实际的例子，展示如何在 Next.js 中使用 Server Actions&quot;
+
+# 最佳实践
+&quot;使用这项技术时，有哪些常见的陷阱需要避免？&quot;
+</code></pre>
+<h3>场景 5：性能优化</h3>
+<pre><code class="language-bash"># 性能分析
+&quot;分析这个页面的性能，找出瓶颈&quot;
+
+# 优化建议
+&quot;给出 3-5 个最影响性能的问题，按影响程度排序&quot;
+
+# 实施优化
+&quot;我们先解决最严重的问题：图片加载慢&quot;
+
+# 验证改进
+&quot;如何测量优化后的性能提升？&quot;
+</code></pre>
+<hr>
+<h2>✍️ 提示词最佳实践</h2>
+<h3>1. 明确具体</h3>
+<pre><code class="language-bash"># ✅ 好的提示词
+&quot;将这个函数的时间复杂度从 O(n²) 优化到 O(n log n)，
+使用快速排序算法。保持现有的 API 接口不变。&quot;
+
+# ❌ 差的提示词
+&quot;让这个函数更快&quot;
+</code></pre>
+<h3>2. 提供上下文</h3>
+<pre><code class="language-bash"># ✅ 好的提示词
+&quot;这是一个 Next.js 14 项目，使用 App Router。
+我需要在这个页面中添加服务端渲染：
+@src/app/products/page.tsx
+考虑我们已经有这些 API：@src/lib/api.ts&quot;
+
+# ❌ 差的提示词
+&quot;帮我加个 SSR&quot;
+</code></pre>
+<h3>3. 指定输出格式</h3>
+<pre><code class="language-bash"># ✅ 好的提示词
+&quot;生成一个检查清单，包括：
+- [ ] 代码质量检查项
+- [ ] 测试覆盖检查项
+- [ ] 性能检查项
+- [ ] 安全检查项
+
+每个检查项后面附上简短说明。&quot;
+
+# ❌ 差的提示词
+&quot;给我一些检查建议&quot;
+</code></pre>
+<h3>4. 设定约束条件</h3>
+<pre><code class="language-bash"># ✅ 好的提示词
+&quot;重构这个模块，要求：
+- 不改变外部 API
+- 保持向后兼容
+- 代码行数减少 20% 以上
+- 添加完整的类型定义&quot;
+
+# ❌ 差的提示词
+&quot;改进这个代码&quot;
+</code></pre>
+<h3>5. 使用示例</h3>
+<pre><code class="language-bash"># ✅ 好的提示词
+&quot;像这样的格式生成文档：
+
+## 函数名
+**功能：** 简短描述
+**参数：** 
+- param1: 类型 - 说明
+**返回：** 类型 - 说明
+**示例：**
+\`\`\`typescript
+// 代码示例
+\`\`\`
+
+请为 @src/utils/ 下所有函数生成这样的文档&quot;
+</code></pre>
+<hr>
+<h2>⚠️ 常见陷阱与避免方法</h2>
+<h3>1. 上下文过长</h3>
+<p><strong>问题：</strong> 对话历史太长，导致响应变慢或超出限制</p>
+<p><strong>解决方案：</strong></p>
+<pre><code class="language-bash"># 定期清理
+&quot;/clear&quot;
+
+# 开始新任务时明确说明
+&quot;开始一个新任务，忽略之前的对话&quot;
+
+# 分多次对话
+&quot;我们分几次完成这个功能，今天先做第一部分&quot;
+</code></pre>
+<h3>2. 任务过于宽泛</h3>
+<p><strong>问题：</strong> Claude 给的回答太泛，不实用</p>
+<p><strong>解决方案：</strong></p>
+<pre><code class="language-bash"># 缩小范围
+&quot;只关注认证模块，不要涉及其他功能&quot;
+
+# 指定深度
+&quot;详细解释这个函数的每一行代码&quot;
+
+# 要求具体示例
+&quot;给我 3 个实际的代码示例&quot;
+</code></pre>
+<h3>3. 盲目信任输出</h3>
+<p><strong>问题：</strong> Claude 可能生成错误或过时的代码</p>
+<p><strong>解决方案：</strong></p>
+<pre><code class="language-bash"># 始终验证
+&quot;这个方案有什么潜在问题？&quot;
+
+# 要求解释
+&quot;为什么选择这个方案而不是其他方案？&quot;
+
+# 交叉验证
+&quot;这个 API 在 Next.js 14 中是最新的吗？&quot;
+
+# 测试驱动
+&quot;先写测试，再实现功能&quot;
+</code></pre>
+<h3>4. 缺乏迭代</h3>
+<p><strong>问题：</strong> 期望一次就得到完美答案</p>
+<p><strong>解决方案：</strong></p>
+<pre><code class="language-bash"># 第一轮
+&quot;给出一个初步方案&quot;
+
+# 第二轮
+&quot;这个方案有哪些可以改进的地方？&quot;
+
+# 第三轮
+&quot;现在实现改进后的版本&quot;
+</code></pre>
+<h3>5. 忽视安全</h3>
+<p><strong>问题：</strong> 生成的代码可能有安全隐患</p>
+<p><strong>解决方案：</strong></p>
+<pre><code class="language-bash"># 明确要求
+&quot;确保代码符合 OWASP 安全最佳实践&quot;
+
+# 安全检查
+&quot;审查这段代码的安全漏洞&quot;
+
+# 不暴露敏感信息
+# ❌ 不要分享：API Keys、密码、数据库凭证
+# ✅ 可以分享：代码结构、错误信息（脱敏后）
+</code></pre>
+<hr>
+<h2>🔥 高级功能</h2>
+<h3>1. 多文件协同编辑</h3>
+<pre><code class="language-bash"># 同时修改多个相关文件
+&quot;更新用户认证流程，需要同步修改：
+1. @src/auth/login.ts - 添加双因素认证
+2. @src/auth/types.ts - 添加新的类型定义
+3. @src/components/LoginForm.tsx - 添加 2FA 输入
+4. @src/pages/settings.tsx - 添加 2FA 设置
+
+确保所有改动保持一致&quot;
+</code></pre>
+<h3>2. 自动化工作流</h3>
+<pre><code class="language-bash"># 创建开发脚本
+&quot;帮我写一个 npm 脚本，自动完成：
+1. 运行测试
+2. 检查代码风格
+3. 构建项目
+4. 生成类型定义&quot;
+
+# Git 自动化
+&quot;创建一个 git hook，在提交前自动运行 lint 和测试&quot;
+</code></pre>
+<h3>3. 代码迁移</h3>
+<pre><code class="language-bash"># 语言迁移
+&quot;将这个 Python 脚本迁移到 TypeScript，保持功能一致&quot;
+
+# 框架迁移
+&quot;帮我把这个 React Class 组件改成 Hooks 版本&quot;
+
+# 版本升级
+&quot;升级这个项目到 Next.js 14，列出所有需要修改的地方&quot;
+</code></pre>
+<h3>4. 文档生成</h3>
+<pre><code class="language-bash"># API 文档
+&quot;为所有 API 端点生成 OpenAPI 规范文档&quot;
+
+# 代码注释
+&quot;为这个文件添加 JSDoc 注释，包括参数说明和返回值&quot;
+
+# README 更新
+&quot;根据最新的功能更新 README.md&quot;
+</code></pre>
+<h3>5. 性能分析</h3>
+<pre><code class="language-bash"># Bundle 分析
+&quot;分析这个项目的打包体积，找出最大的依赖&quot;
+
+# 渲染性能
+&quot;找出这个页面中导致重复渲染的组件&quot;
+
+# 数据库优化
+&quot;分析这些查询，给出索引优化建议&quot;
+</code></pre>
+<hr>
+<h2>📖 学习资源</h2>
+<h3>官方文档</h3>
+<ul>
+<li><a href="https://code.claude.com/docs">Claude Code 官方文档</a></li>
+<li><a href="https://docs.anthropic.com/">Anthropic 开发者文档</a></li>
+<li><a href="https://github.com/anthropics/claude-code">GitHub 仓库</a></li>
+</ul>
+<h3>社区资源</h3>
+<ul>
+<li><a href="https://anthropic.com/discord">Claude Developers Discord</a></li>
+<li><a href="https://reddit.com/r/ClaudeAI">Reddit r/ClaudeAI</a></li>
+<li><a href="https://github.com/anthropics/claude-code/issues">GitHub Issues</a></li>
+</ul>
+<h3>学习路径建议</h3>
+<pre><code>第 1 周：基础使用
+├── 安装配置
+├── 基本对话
+├── 文件查看
+└── 简单代码生成
+
+第 2 周：进阶功能
+├── 多文件编辑
+├── Git 集成
+├── 调试辅助
+└── 测试生成
+
+第 3 周：实战应用
+├── 完整功能开发
+├── 代码重构
+├── 性能优化
+└── 文档生成
+
+第 4 周：高效工作流
+├── 自定义命令
+├── 自动化脚本
+├── 团队协作
+└── 最佳实践总结
+</code></pre>
+<hr>
+<h2>💡 个人建议</h2>
+<p>基于我的使用经验，以下几点最重要：</p>
+<h3>1. 把 Claude 当同事，不是搜索引擎</h3>
+<ul>
+<li>✅ 好：「我们一起重构这个模块，你先分析，我review 方案后再实现」</li>
+<li>❌ 差：「给我代码」</li>
+</ul>
+<h3>2. 保持对话的连续性</h3>
+<ul>
+<li>一个会话专注于一个主题</li>
+<li>复杂任务分多个会话完成</li>
+<li>定期 <code>/clear</code> 保持上下文清爽</li>
+</ul>
+<h3>3. 学会「追问」</h3>
+<pre><code class="language-bash"># 追问原因
+「为什么选择这个方案？」
+
+# 追问替代方案
+「还有其他实现方式吗？各有什么优缺点？」
+
+# 追问细节
+「这个类型定义能再详细点吗？」
+</code></pre>
+<h3>4. 建立自己的提示词库</h3>
+<p>保存常用的提示词模板，例如：</p>
+<pre><code class="language-bash"># 代码审查模板
+「审查这段代码，关注：
+1. 功能正确性
+2. 性能问题
+3. 代码可读性
+4. 类型安全
+5. 错误处理
+
+给出具体的改进建议和代码示例」
+
+# 新功能开发模板
+「实现 [功能描述]，要求：
+- 技术栈：[技术选型]
+- 输入：[输入数据]
+- 输出：[期望结果]
+- 约束：[限制条件]
+
+先设计方案，确认后再实现」
+</code></pre>
+<h3>5. 验证、验证、再验证</h3>
+<ul>
+<li>运行生成的代码</li>
+<li>检查测试是否通过</li>
+<li>手动验证关键功能</li>
+<li>不要盲目信任任何输出</li>
+</ul>
+<hr>
+<h2>🎯 快速参考卡片</h2>
+<h3>常用命令</h3>
+<pre><code class="language-bash">claude              # 启动 Claude Code
+claude /path        # 在指定目录启动
+claude --version    # 查看版本
+/help               # 查看帮助
+/clear              # 清除对话
+/exit               # 退出
+</code></pre>
+<h3>提示词模板</h3>
+<pre><code class="language-bash"># 分析代码
+「分析 @filename，解释：
+1. 主要功能
+2. 关键算法
+3. 依赖关系
+4. 改进建议」
+
+# 生成代码
+「创建 [组件/函数]，实现 [功能]，要求：
+- 使用 [技术栈]
+- 包含 [特性]
+- 遵循 [规范]」
+
+# 调试问题
+「这个错误怎么修复？
+[错误信息]
+相关代码：@filename」
+
+# 代码审查
+「审查这段代码，找出：
+- bug
+- 性能问题
+- 代码异味
+- 安全隐患」
+</code></pre>
+<hr>
+<p><strong>最后提醒：</strong> Claude Code 是强大的工具，但它只是工具。你的判断力、创造力和责任感才是写出好代码的关键。用它来增强你的能力，而不是替代你的思考。</p>
+<p>祝编码愉快！🚀</p>
+</div></div></article></main><section class="text-gray-700 bg-white border-t dark:bg-neutral-950 border-neutral-200 dark:border-neutral-800"><div class="container flex flex-col items-center justify-center min-h-[40px] mx-auto px-7 max-w-7xl sm:flex-row sm:min-h-[50px]"><a class="h-5 text-base group relative z-30 flex items-center space-x-1.5 text-black dark:text-white font-semibold" href="/"><span class="text-xl -translate-y-0.5 group-hover:-rotate-12 group-hover:scale-[1.2] ease-in-out duration-300">✦</span><span class="-translate-y-0.5">Hopekayo</span></a><p class="mt-2 text-sm text-neutral-700 dark:text-neutral-100 sm:ml-4 sm:pl-4 sm:border-l sm:border-neutral-300 dark:sm:border-neutral-700 sm:mt-0">© 2025 Hopekayo. All rights reserved.</p><span class="inline-flex justify-center mt-2 space-x-5 sm:ml-auto sm:mt-0 sm:justify-start"><a href="https://x.com/hopekayo" target="_blank" class="text-neutral-500 dark:text-neutral-400 hover:text-neutral-900 dark:hover:text-white"><span class="sr-only">𝕏</span><svg class="w-5 h-5 dark:stroke-black stroke-white" viewBox="0 0 100 100" fill="none" xmlns="http://www.w3.org/2000/svg"><path fill-rule="evenodd" clip-rule="evenodd" d="M95 50c0 24.853-20.147 45-45 45S5 74.853 5 50 25.147 5 50 5s45 20.147 45 45Zm-51.21 2.688-21.51-28.76h16.578l14.1 18.855 17.453-18.855h4.872L55.135 45.694l22.72 30.377H61.279L45.967 55.598l-18.95 20.473h-4.873L43.79 52.688Zm-6.73-25.172h-7.616l33.63 44.967h7.616L37.06 27.516Z" fill="currentColor"></path><path d="M22.28 23.928v-.5h-.998l.597.8.4-.3Zm21.51 28.76.366.34.283-.306-.25-.334-.4.3Zm-4.932-28.76.4-.3-.15-.2h-.25v.5Zm14.1 18.855-.4.3.36.48.408-.44-.367-.34Zm17.453-18.855v-.5h-.219l-.148.16.367.34Zm4.872 0 .367.34.777-.84h-1.144v.5ZM55.135 45.694l-.367-.34-.282.306.249.333.4-.3Zm22.72 30.377v.5h.999l-.598-.8-.4.3Zm-16.577 0-.4.3.15.2h.25v-.5ZM45.967 55.598l.4-.3-.36-.48-.407.44.367.34Zm-18.95 20.473v.5h.218l.148-.16-.367-.34Zm-4.873 0-.367-.34-.777.84h1.144v-.5Zm7.3-48.554v-.5h-.998l.598.799.4-.3Zm7.616 0 .4-.3-.15-.2h-.25v.5Zm26.015 44.966-.4.3.15.2h.25v-.5Zm7.615 0v.5h.999l-.598-.8-.4.3ZM50 95.5c25.129 0 45.5-20.371 45.5-45.5h-1c0 24.577-19.923 44.5-44.5 44.5v1ZM4.5 50c0 25.129 20.371 45.5 45.5 45.5v-1C25.423 94.5 5.5 74.577 5.5 50h-1ZM50 4.5C24.871 4.5 4.5 24.871 4.5 50h1C5.5 25.423 25.423 5.5 50 5.5v-1ZM95.5 50C95.5 24.871 75.129 4.5 50 4.5v1c24.577 0 44.5 19.923 44.5 44.5h1ZM21.88 24.228l21.509 28.76.8-.6-21.509-28.76-.8.6Zm16.978-.8H22.28v1h16.578v-1Zm14.501 19.055L39.258 23.63l-.8.599 14.1 18.854.801-.599ZM70.044 23.59 52.592 42.443l.734.68 17.452-18.855-.734-.68Zm5.239-.16H70.41v1h4.872v-1Zm-19.78 22.605L75.65 24.268l-.734-.68-20.148 21.766.734.68Zm22.753 29.738-22.72-30.378-.801.6 22.72 30.377.8-.6Zm-16.978.799h16.578v-1H61.278v1ZM45.566 55.898 60.877 76.37l.801-.599L46.368 55.3l-.802.599ZM27.383 76.41l18.95-20.473-.733-.68-18.95 20.473.733.68Zm-5.239.16h4.872v-1h-4.872v1Zm21.278-24.223L21.777 75.731l.734.68 21.645-23.383-.734-.68ZM29.444 28.017h7.616v-1h-7.616v1Zm34.031 44.166-33.63-44.966-.801.599 33.63 44.966.801-.599Zm7.215-.2h-7.615v1h7.615v-1ZM36.66 27.816l33.63 44.966.8-.599-33.63-44.966-.8.599Z" fill="currentStroke"></path></svg></a><a href="https://github.com/hopekayo" target="_blank" class="text-neutral-500 dark:text-neutral-400 hover:text-neutral-900 dark:hover:text-white"><span class="sr-only">GitHub</span><svg class="w-5 h-5" fill="currentColor" viewBox="0 0 24 24" aria-hidden="true"><path fill-rule="evenodd" d="M12 2C6.477 2 2 6.484 2 12.017c0 4.425 2.865 8.18 6.839 9.504.5.092.682-.217.682-.483 0-.237-.008-.868-.013-1.703-2.782.605-3.369-1.343-3.369-1.343-.454-1.158-1.11-1.466-1.11-1.466-.908-.62.069-.608.069-.608 1.003.07 1.531 1.032 1.531 1.032.892 1.53 2.341 1.088 2.91.832.092-.647.35-1.088.636-1.338-2.22-.253-4.555-1.113-4.555-4.951 0-1.093.39-1.988 1.029-2.688-.103-.253-.446-1.272.098-2.65 0 0 .84-.27 2.75 1.026A9.564 9.564 0 0112 6.844c.85.004 1.705.115 2.504.337 1.909-1.296 2.747-1.027 2.747-1.027.546 1.379.202 2.398.1 2.651.64.7 1.028 1.595 1.028 2.688 0 3.848-2.339 4.695-4.566 4.943.359.309.678.92.678 1.855 0 1.338-.012 2.419-.012 2.747 0 .268.18.58.688.482A10.019 10.019 0 0022 12.017C22 6.484 17.522 2 12 2z" clip-rule="evenodd"></path></svg></a><a href="mailto:hopekayo@gmail.com" class="text-neutral-500 dark:text-neutral-400 hover:text-neutral-900 dark:hover:text-white"><span class="sr-only">Email</span><svg class="w-5 h-5" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 8l7.89 5.26a2 2 0 002.22 0L21 8M5 19h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z"></path></svg></a></span></div></section></div></div></div><script src="/_next/static/chunks/webpack-c3abfac567409070.js" crossorigin="" async=""></script><script>(self.__next_f=self.__next_f||[]).push([0]);self.__next_f.push([2,null])</script><script>self.__next_f.push([1,"1:HL[\"/_next/static/media/e4af272ccee01ff0-s.p.woff2\",\"font\",{\"crossOrigin\":\"\",\"type\":\"font/woff2\"}]\n2:HL[\"/_next/static/css/c2d646e594b909bf.css\",\"style\",{\"crossOrigin\":\"\"}]\n0:\"$L3\"\n"])</script><script>self.__next_f.push([1,"4:I[7690,[],\"\"]\n7:I[5613,[],\"\"]\n9:I[1778,[],\"\"]\na:I[3397,[\"185\",\"static/chunks/app/layout-2cf9e241889d2c49.js\"],\"\"]\nc:I[8955,[],\"\"]\n8:[\"slug\",\"2026-03-16-claude-code-best-practices\",\"d\"]\nd:[]\n"])</script><script>self.__next_f.push([1,"3:[[[\"$\",\"link\",\"0\",{\"rel\":\"stylesheet\",\"href\":\"/_next/static/css/c2d646e594b909bf.css\",\"precedence\":\"next\",\"crossOrigin\":\"\"}]],[\"$\",\"$L4\",null,{\"buildId\":\"XkPPpES-Y_HzAut79GXO5\",\"assetPrefix\":\"\",\"initialCanonicalUrl\":\"/posts/2026-03-16-claude-code-best-practices/\",\"initialTree\":[\"\",{\"children\":[\"posts\",{\"children\":[[\"slug\",\"2026-03-16-claude-code-best-practices\",\"d\"],{\"children\":[\"__PAGE__?{\\\"slug\\\":\\\"2026-03-16-claude-code-best-practices\\\"}\",{}]}]}]},\"$undefined\",\"$undefined\",true],\"initialSeedData\":[\"\",{\"children\":[\"posts\",{\"children\":[[\"slug\",\"2026-03-16-claude-code-best-practices\",\"d\"],{\"children\":[\"__PAGE__\",{},[\"$L5\",\"$L6\",null]]},[null,[\"$\",\"$L7\",null,{\"parallelRouterKey\":\"children\",\"segmentPath\":[\"children\",\"posts\",\"children\",\"$8\",\"children\"],\"loading\":\"$undefined\",\"loadingStyles\":\"$undefined\",\"loadingScripts\":\"$undefined\",\"hasLoading\":false,\"error\":\"$undefined\",\"errorStyles\":\"$undefined\",\"errorScripts\":\"$undefined\",\"template\":[\"$\",\"$L9\",null,{}],\"templateStyles\":\"$undefined\",\"templateScripts\":\"$undefined\",\"notFound\":\"$undefined\",\"notFoundStyles\":\"$undefined\",\"styles\":null}],null]]},[\"$\",\"$L7\",null,{\"parallelRouterKey\":\"children\",\"segmentPath\":[\"children\",\"posts\",\"children\"],\"loading\":\"$undefined\",\"loadingStyles\":\"$undefined\",\"loadingScripts\":\"$undefined\",\"hasLoading\":false,\"error\":\"$undefined\",\"errorStyles\":\"$undefined\",\"errorScripts\":\"$undefined\",\"template\":[\"$\",\"$L9\",null,{}],\"templateStyles\":\"$undefined\",\"templateScripts\":\"$undefined\",\"notFound\":\"$undefined\",\"notFoundStyles\":\"$undefined\",\"styles\":null}]]},[null,[\"$\",\"html\",null,{\"lang\":\"en\",\"suppressHydrationWarning\":true,\"children\":[\"$\",\"body\",null,{\"className\":\"__className_f367f3\",\"children\":[\"$\",\"$La\",null,{\"children\":[\"$\",\"div\",null,{\"className\":\"relative h-screen\",\"children\":[\"$\",\"div\",null,{\"className\":\"relative z-10 flex flex-col h-full\",\"children\":[\"$\",\"$L7\",null,{\"parallelRouterKey\":\"children\",\"segmentPath\":[\"children\"],\"loading\":\"$undefined\",\"loadingStyles\":\"$undefined\",\"loadingScripts\":\"$undefined\",\"hasLoading\":false,\"error\":\"$undefined\",\"errorStyles\":\"$undefined\",\"errorScripts\":\"$undefined\",\"template\":[\"$\",\"$L9\",null,{}],\"templateStyles\":\"$undefined\",\"templateScripts\":\"$undefined\",\"notFound\":[[\"$\",\"title\",null,{\"children\":\"404: This page could not be found.\"}],[\"$\",\"div\",null,{\"style\":{\"fontFamily\":\"system-ui,\\\"Segoe UI\\\",Roboto,Helvetica,Arial,sans-serif,\\\"Apple Color Emoji\\\",\\\"Segoe UI Emoji\\\"\",\"height\":\"100vh\",\"textAlign\":\"center\",\"display\":\"flex\",\"flexDirection\":\"column\",\"alignItems\":\"center\",\"justifyContent\":\"center\"},\"children\":[\"$\",\"div\",null,{\"children\":[[\"$\",\"style\",null,{\"dangerouslySetInnerHTML\":{\"__html\":\"body{color:#000;background:#fff;margin:0}.next-error-h1{border-right:1px solid rgba(0,0,0,.3)}@media (prefers-color-scheme:dark){body{color:#fff;background:#000}.next-error-h1{border-right:1px solid rgba(255,255,255,.3)}}\"}}],[\"$\",\"h1\",null,{\"className\":\"next-error-h1\",\"style\":{\"display\":\"inline-block\",\"margin\":\"0 20px 0 0\",\"padding\":\"0 23px 0 0\",\"fontSize\":24,\"fontWeight\":500,\"verticalAlign\":\"top\",\"lineHeight\":\"49px\"},\"children\":\"404\"}],[\"$\",\"div\",null,{\"style\":{\"display\":\"inline-block\"},\"children\":[\"$\",\"h2\",null,{\"style\":{\"fontSize\":14,\"fontWeight\":400,\"lineHeight\":\"49px\",\"margin\":0},\"children\":\"This page could not be found.\"}]}]]}]}]],\"notFoundStyles\":[],\"styles\":null}]}]}]}]}]}],null]],\"initialHead\":[false,\"$Lb\"],\"globalErrorComponent\":\"$c\",\"missingSlots\":\"$Wd\"}]]\n"])</script><script>self.__next_f.push([1,"b:[[\"$\",\"meta\",\"0\",{\"name\":\"viewport\",\"content\":\"width=device-width, initial-scale=1\"}],[\"$\",\"meta\",\"1\",{\"charSet\":\"utf-8\"}],[\"$\",\"title\",\"2\",{\"children\":\"Someone's Portfolio\"}],[\"$\",\"meta\",\"3\",{\"name\":\"description\",\"content\":\"A showcase of my work and thoughts\"}],[\"$\",\"meta\",\"4\",{\"name\":\"next-size-adjust\"}]]\n5:null\n"])</script><script>self.__next_f.push([1,"e:I[6836,[\"51\",\"static/chunks/51-db90af79fa0fde6c.js\",\"939\",\"static/chunks/939-42d9698cb692b591.js\",\"333\",\"static/chunks/app/posts/%5Bslug%5D/page-a8fec07d28a2c1fa.js\"],\"\"]\n10:I[8722,[\"51\",\"static/chunks/51-db90af79fa0fde6c.js\",\"939\",\"static/chunks/939-42d9698cb692b591.js\",\"333\",\"static/chunks/app/posts/%5Bslug%5D/page-a8fec07d28a2c1fa.js\"],\"\"]\nf:T44fd,"])</script><script>self.__next_f.push([1,"\u003ch1\u003e🎯 Claude Code 最佳实践指南\u003c/h1\u003e\n\u003cp\u003e\u003cstrong\u003e版本：\u003c/strong\u003e 2026 年 3 月\u003cbr\u003e\u003cstrong\u003e适用对象：\u003c/strong\u003e 想要高效使用 Claude Code 的开发者\u003cbr\u003e\u003cstrong\u003e前置条件：\u003c/strong\u003e 已安装 Claude Code (\u003ccode\u003eclaude\u003c/code\u003e 命令可用)\u003c/p\u003e\n\u003chr\u003e\n\u003ch2\u003e📚 目录\u003c/h2\u003e\n\u003col\u003e\n\u003cli\u003e\u003ca href=\"#%E5%BF%AB%E9%80%9F%E5%85%A5%E9%97%A8\"\u003e快速入门\u003c/a\u003e\u003c/li\u003e\n\u003cli\u003e\u003ca href=\"#%E6%A0%B8%E5%BF%83%E5%8A%9F%E8%83%BD%E8%AF%A6%E8%A7%A3\"\u003e核心功能详解\u003c/a\u003e\u003c/li\u003e\n\u003cli\u003e\u003ca href=\"#%E9%AB%98%E6%95%88%E4%BD%BF%E7%94%A8%E6%8A%80%E5%B7%A7\"\u003e高效使用技巧\u003c/a\u003e\u003c/li\u003e\n\u003cli\u003e\u003ca href=\"#%E5%AE%9E%E6%88%98%E5%9C%BA%E6%99%AF\"\u003e实战场景\u003c/a\u003e\u003c/li\u003e\n\u003cli\u003e\u003ca href=\"#%E6%8F%90%E7%A4%BA%E8%AF%8D%E6%9C%80%E4%BD%B3%E5%AE%9E%E8%B7%B5\"\u003e提示词最佳实践\u003c/a\u003e\u003c/li\u003e\n\u003cli\u003e\u003ca href=\"#%E5%B8%B8%E8%A7%81%E9%99%B7%E9%98%B1%E4%B8%8E%E9%81%BF%E5%85%8D%E6%96%B9%E6%B3%95\"\u003e常见陷阱与避免方法\u003c/a\u003e\u003c/li\u003e\n\u003cli\u003e\u003ca href=\"#%E9%AB%98%E7%BA%A7%E5%8A%9F%E8%83%BD\"\u003e高级功能\u003c/a\u003e\u003c/li\u003e\n\u003cli\u003e\u003ca href=\"#%E5%AD%A6%E4%B9%A0%E8%B5%84%E6%BA%90\"\u003e学习资源\u003c/a\u003e\u003c/li\u003e\n\u003c/ol\u003e\n\u003chr\u003e\n\u003ch2\u003e🚀 快速入门\u003c/h2\u003e\n\u003ch3\u003e安装确认\u003c/h3\u003e\n\u003cpre\u003e\u003ccode class=\"language-bash\"\u003e# 检查是否已安装\nclaude --version\n\n# 查看帮助\nclaude --help\n\u003c/code\u003e\u003c/pre\u003e\n\u003ch3\u003e启动方式\u003c/h3\u003e\n\u003cpre\u003e\u003ccode class=\"language-bash\"\u003e# 方式 1：在项目目录中直接运行\ncd /path/to/your/project\nclaude\n\n# 方式 2：指定目录启动\nclaude /path/to/project\n\n# 方式 3：使用别名（推荐）\n# 在 ~/.zshrc 中添加：\nalias cc=\u0026#39;claude\u0026#39;\n\u003c/code\u003e\u003c/pre\u003e\n\u003ch3\u003e首次使用\u003c/h3\u003e\n\u003cpre\u003e\u003ccode class=\"language-bash\"\u003e# 1. 登录（如未登录）\nclaude login\n\n# 2. 开始对话\nclaude\n\n# 3. 输入你的第一个任务\n\u0026quot;帮我分析这个项目的结构\u0026quot;\n\u003c/code\u003e\u003c/pre\u003e\n\u003chr\u003e\n\u003ch2\u003e🛠️ 核心功能详解\u003c/h2\u003e\n\u003ch3\u003e1. 代码理解与分析\u003c/h3\u003e\n\u003ch4\u003e项目探索\u003c/h4\u003e\n\u003cpre\u003e\u003ccode class=\"language-bash\"\u003e# 让 Claude 分析项目结构\n\u0026quot;分析这个项目的目录结构，解释每个主要目录的用途\u0026quot;\n\n# 理解特定文件\n\u0026quot;解释 src/utils/auth.ts 文件的功能和实现逻辑\u0026quot;\n\n# 查找相关代码\n\u0026quot;找出所有与用户认证相关的代码文件\u0026quot;\n\u003c/code\u003e\u003c/pre\u003e\n\u003ch4\u003e代码解释\u003c/h4\u003e\n\u003cpre\u003e\u003ccode class=\"language-bash\"\u003e# 逐行解释复杂函数\n\u0026quot;逐行解释这个函数的逻辑，指出关键设计决策\u0026quot;\n\n# 识别设计模式\n\u0026quot;这段代码使用了哪些设计模式？为什么这样设计？\u0026quot;\n\n# 理解依赖关系\n\u0026quot;画出这个模块的依赖关系图\u0026quot;\n\u003c/code\u003e\u003c/pre\u003e\n\u003ch3\u003e2. 代码生成与修改\u003c/h3\u003e\n\u003ch4\u003e创建新文件\u003c/h4\u003e\n\u003cpre\u003e\u003ccode class=\"language-bash\"\u003e# 创建完整的功能模块\n\u0026quot;创建一个用户注册 API 端点，包含：\n- 输入验证\n- 密码加密\n- 邮箱验证\n- 错误处理\n使用 TypeScript + Express\u0026quot;\n\n# 生成测试文件\n\u0026quot;为 src/services/user.service.ts 生成完整的单元测试\u0026quot;\n\u003c/code\u003e\u003c/pre\u003e\n\u003ch4\u003e修改现有代码\u003c/h4\u003e\n\u003cpre\u003e\u003ccode class=\"language-bash\"\u003e# 重构代码\n\u0026quot;重构这个函数，使其更符合 SOLID 原则\u0026quot;\n\n# 添加功能\n\u0026quot;在这个组件中添加搜索过滤功能\u0026quot;\n\n# 性能优化\n\u0026quot;优化这个数据库查询，减少 N+1 问题\u0026quot;\n\u003c/code\u003e\u003c/pre\u003e\n\u003ch3\u003e3. Git 工作流\u003c/h3\u003e\n\u003ch4\u003e日常 Git 操作\u003c/h4\u003e\n\u003cpre\u003e\u003ccode class=\"language-bash\"\u003e# 智能提交\n\u0026quot;帮我提交刚才的修改，写一个清晰的 commit message\u0026quot;\n\n# 查看变更\n\u0026quot;总结我这次分支的所有改动\u0026quot;\n\n# 解决冲突\n\u0026quot;帮我解决这个合并冲突，保留两个分支的关键改动\u0026quot;\n\u003c/code\u003e\u003c/pre\u003e\n\u003ch4\u003eGit 最佳实践\u003c/h4\u003e\n\u003cpre\u003e\u003ccode class=\"language-bash\"\u003e# 创建特性分支\n\u0026quot;基于 main 创建一个新分支，用于实现用户个人资料功能\u0026quot;\n\n# 代码审查准备\n\u0026quot;生成一个 PR 描述，列出主要改动和测试要点\u0026quot;\n\n# 回滚操作\n\u0026quot;安全地回滚上一个提交，保留工作副本\u0026quot;\n\u003c/code\u003e\u003c/pre\u003e\n\u003ch3\u003e4. 调试与问题排查\u003c/h3\u003e\n\u003ch4\u003e错误诊断\u003c/h4\u003e\n\u003cpre\u003e\u003ccode class=\"language-bash\"\u003e# 分析错误信息\n\u0026quot;这个错误是什么意思？如何修复？\n[粘贴错误堆栈]\u0026quot;\n\n# 定位 bug\n\u0026quot;找出导致这个测试失败的代码位置\u0026quot;\n\n# 性能问题\n\u0026quot;分析这个函数的性能瓶颈\u0026quot;\n\u003c/code\u003e\u003c/pre\u003e\n\u003ch4\u003e日志分析\u003c/h4\u003e\n\u003cpre\u003e\u003ccode class=\"language-bash\"\u003e# 添加调试日志\n\u0026quot;在这个函数中添加详细的调试日志\u0026quot;\n\n# 分析日志输出\n\u0026quot;分析这些日志，找出问题根源\u0026quot;\n\u003c/code\u003e\u003c/pre\u003e\n\u003chr\u003e\n\u003ch2\u003e⚡ 高效使用技巧\u003c/h2\u003e\n\u003ch3\u003e1. 上下文管理\u003c/h3\u003e\n\u003ch4\u003e保持上下文清晰\u003c/h4\u003e\n\u003cpre\u003e\u003ccode class=\"language-bash\"\u003e# ✅ 好：明确的任务描述\n\u0026quot;重构用户认证模块，目标是：\n1. 提高代码可读性\n2. 减少重复代码\n3. 添加类型定义\n先分析现有代码，然后给出重构方案\u0026quot;\n\n# ❌ 差：模糊的请求\n\u0026quot;帮我改进这个代码\u0026quot;\n\u003c/code\u003e\u003c/pre\u003e\n\u003ch4\u003e分步执行复杂任务\u003c/h4\u003e\n\u003cpre\u003e\u003ccode class=\"language-bash\"\u003e# 第一步：分析\n\u0026quot;先分析这个项目的架构，不要修改代码\u0026quot;\n\n# 第二步：规划\n\u0026quot;基于分析，给出改进建议，按优先级排序\u0026quot;\n\n# 第三步：执行\n\u0026quot;现在开始实现第一个建议\u0026quot;\n\u003c/code\u003e\u003c/pre\u003e\n\u003ch3\u003e2. 使用快捷命令\u003c/h3\u003e\n\u003cpre\u003e\u003ccode class=\"language-bash\"\u003e# /help - 查看所有可用命令\n# /clear - 清除当前对话历史\n# /exit - 退出 Claude Code\n# /bug - 报告问题\n# /feedback - 提供反馈\n\u003c/code\u003e\u003c/pre\u003e\n\u003ch3\u003e3. 文件引用技巧\u003c/h3\u003e\n\u003cpre\u003e\u003ccode class=\"language-bash\"\u003e# 引用特定文件\n\u0026quot;查看 @src/components/Button.tsx 和 @src/styles/button.css，\n然后统一这两个文件的样式定义\u0026quot;\n\n# 引用多个文件\n\u0026quot;对比 @file1.ts 和 @file2.ts 的实现差异\u0026quot;\n\n# 引用目录\n\u0026quot;分析 @src/utils/ 目录下所有工具函数的使用模式\u0026quot;\n\u003c/code\u003e\u003c/pre\u003e\n\u003ch3\u003e4. 迭代式开发\u003c/h3\u003e\n\u003cpre\u003e\u003ccode class=\"language-bash\"\u003e# 第一轮：原型\n\u0026quot;创建一个简单的待办事项组件，只需要基本功能\u0026quot;\n\n# 第二轮：增强\n\u0026quot;现在添加以下功能：\n- 拖拽排序\n- 分类标签\n- 截止日期\u0026quot;\n\n# 第三轮：优化\n\u0026quot;优化性能，添加 memoization 和虚拟滚动\u0026quot;\n\u003c/code\u003e\u003c/pre\u003e\n\u003chr\u003e\n\u003ch2\u003e🎬 实战场景\u003c/h2\u003e\n\u003ch3\u003e场景 1：接手新项目\u003c/h3\u003e\n\u003cpre\u003e\u003ccode class=\"language-bash\"\u003e# 第 1 步：项目概览\n\u0026quot;快速浏览这个项目，告诉我：\n1. 使用什么技术栈？\n2. 项目结构是怎样的？\n3. 主要的业务模块有哪些？\u0026quot;\n\n# 第 2 步：深入理解\n\u0026quot;解释这个项目的数据流是如何工作的\u0026quot;\n\n# 第 3 步：环境搭建\n\u0026quot;帮我生成一个环境搭建指南，包括所有必要的安装步骤\u0026quot;\n\n# 第 4 步：识别改进点\n\u0026quot;基于最佳实践，这个项目有哪些可以改进的地方？\u0026quot;\n\u003c/code\u003e\u003c/pre\u003e\n\u003ch3\u003e场景 2：实现新功能\u003c/h3\u003e\n\u003cpre\u003e\u003ccode class=\"language-bash\"\u003e# 第 1 步：需求分析\n\u0026quot;我需要实现一个用户通知系统，需求如下：\n[描述需求]\n帮我设计技术方案\u0026quot;\n\n# 第 2 步：架构设计\n\u0026quot;画出这个功能的架构图，说明各个组件的职责\u0026quot;\n\n# 第 3 步：分步实现\n\u0026quot;我们先实现核心通知服务，然后再做 UI 组件\u0026quot;\n\n# 第 4 步：测试\n\u0026quot;生成完整的测试用例，包括边界情况\u0026quot;\n\u003c/code\u003e\u003c/pre\u003e\n\u003ch3\u003e场景 3：代码审查\u003c/h3\u003e\n\u003cpre\u003e\u003ccode class=\"language-bash\"\u003e# 审查自己的代码\n\u0026quot;审查我刚才写的代码，找出：\n1. 潜在 bug\n2. 性能问题\n3. 代码异味\n4. 安全漏洞\u0026quot;\n\n# 准备 PR\n\u0026quot;帮我写一个 PR 描述，包括：\n- 改动概述\n- 技术细节\n- 测试方法\n- 可能的影响\u0026quot;\n\u003c/code\u003e\u003c/pre\u003e\n\u003ch3\u003e场景 4：学习新技术\u003c/h3\u003e\n\u003cpre\u003e\u003ccode class=\"language-bash\"\u003e# 概念理解\n\u0026quot;用简单的例子解释 React Server Components 的工作原理\u0026quot;\n\n# 实践应用\n\u0026quot;给我一个实际的例子，展示如何在 Next.js 中使用 Server Actions\u0026quot;\n\n# 最佳实践\n\u0026quot;使用这项技术时，有哪些常见的陷阱需要避免？\u0026quot;\n\u003c/code\u003e\u003c/pre\u003e\n\u003ch3\u003e场景 5：性能优化\u003c/h3\u003e\n\u003cpre\u003e\u003ccode class=\"language-bash\"\u003e# 性能分析\n\u0026quot;分析这个页面的性能，找出瓶颈\u0026quot;\n\n# 优化建议\n\u0026quot;给出 3-5 个最影响性能的问题，按影响程度排序\u0026quot;\n\n# 实施优化\n\u0026quot;我们先解决最严重的问题：图片加载慢\u0026quot;\n\n# 验证改进\n\u0026quot;如何测量优化后的性能提升？\u0026quot;\n\u003c/code\u003e\u003c/pre\u003e\n\u003chr\u003e\n\u003ch2\u003e✍️ 提示词最佳实践\u003c/h2\u003e\n\u003ch3\u003e1. 明确具体\u003c/h3\u003e\n\u003cpre\u003e\u003ccode class=\"language-bash\"\u003e# ✅ 好的提示词\n\u0026quot;将这个函数的时间复杂度从 O(n²) 优化到 O(n log n)，\n使用快速排序算法。保持现有的 API 接口不变。\u0026quot;\n\n# ❌ 差的提示词\n\u0026quot;让这个函数更快\u0026quot;\n\u003c/code\u003e\u003c/pre\u003e\n\u003ch3\u003e2. 提供上下文\u003c/h3\u003e\n\u003cpre\u003e\u003ccode class=\"language-bash\"\u003e# ✅ 好的提示词\n\u0026quot;这是一个 Next.js 14 项目，使用 App Router。\n我需要在这个页面中添加服务端渲染：\n@src/app/products/page.tsx\n考虑我们已经有这些 API：@src/lib/api.ts\u0026quot;\n\n# ❌ 差的提示词\n\u0026quot;帮我加个 SSR\u0026quot;\n\u003c/code\u003e\u003c/pre\u003e\n\u003ch3\u003e3. 指定输出格式\u003c/h3\u003e\n\u003cpre\u003e\u003ccode class=\"language-bash\"\u003e# ✅ 好的提示词\n\u0026quot;生成一个检查清单，包括：\n- [ ] 代码质量检查项\n- [ ] 测试覆盖检查项\n- [ ] 性能检查项\n- [ ] 安全检查项\n\n每个检查项后面附上简短说明。\u0026quot;\n\n# ❌ 差的提示词\n\u0026quot;给我一些检查建议\u0026quot;\n\u003c/code\u003e\u003c/pre\u003e\n\u003ch3\u003e4. 设定约束条件\u003c/h3\u003e\n\u003cpre\u003e\u003ccode class=\"language-bash\"\u003e# ✅ 好的提示词\n\u0026quot;重构这个模块，要求：\n- 不改变外部 API\n- 保持向后兼容\n- 代码行数减少 20% 以上\n- 添加完整的类型定义\u0026quot;\n\n# ❌ 差的提示词\n\u0026quot;改进这个代码\u0026quot;\n\u003c/code\u003e\u003c/pre\u003e\n\u003ch3\u003e5. 使用示例\u003c/h3\u003e\n\u003cpre\u003e\u003ccode class=\"language-bash\"\u003e# ✅ 好的提示词\n\u0026quot;像这样的格式生成文档：\n\n## 函数名\n**功能：** 简短描述\n**参数：** \n- param1: 类型 - 说明\n**返回：** 类型 - 说明\n**示例：**\n\\`\\`\\`typescript\n// 代码示例\n\\`\\`\\`\n\n请为 @src/utils/ 下所有函数生成这样的文档\u0026quot;\n\u003c/code\u003e\u003c/pre\u003e\n\u003chr\u003e\n\u003ch2\u003e⚠️ 常见陷阱与避免方法\u003c/h2\u003e\n\u003ch3\u003e1. 上下文过长\u003c/h3\u003e\n\u003cp\u003e\u003cstrong\u003e问题：\u003c/strong\u003e 对话历史太长，导致响应变慢或超出限制\u003c/p\u003e\n\u003cp\u003e\u003cstrong\u003e解决方案：\u003c/strong\u003e\u003c/p\u003e\n\u003cpre\u003e\u003ccode class=\"language-bash\"\u003e# 定期清理\n\u0026quot;/clear\u0026quot;\n\n# 开始新任务时明确说明\n\u0026quot;开始一个新任务，忽略之前的对话\u0026quot;\n\n# 分多次对话\n\u0026quot;我们分几次完成这个功能，今天先做第一部分\u0026quot;\n\u003c/code\u003e\u003c/pre\u003e\n\u003ch3\u003e2. 任务过于宽泛\u003c/h3\u003e\n\u003cp\u003e\u003cstrong\u003e问题：\u003c/strong\u003e Claude 给的回答太泛，不实用\u003c/p\u003e\n\u003cp\u003e\u003cstrong\u003e解决方案：\u003c/strong\u003e\u003c/p\u003e\n\u003cpre\u003e\u003ccode class=\"language-bash\"\u003e# 缩小范围\n\u0026quot;只关注认证模块，不要涉及其他功能\u0026quot;\n\n# 指定深度\n\u0026quot;详细解释这个函数的每一行代码\u0026quot;\n\n# 要求具体示例\n\u0026quot;给我 3 个实际的代码示例\u0026quot;\n\u003c/code\u003e\u003c/pre\u003e\n\u003ch3\u003e3. 盲目信任输出\u003c/h3\u003e\n\u003cp\u003e\u003cstrong\u003e问题：\u003c/strong\u003e Claude 可能生成错误或过时的代码\u003c/p\u003e\n\u003cp\u003e\u003cstrong\u003e解决方案：\u003c/strong\u003e\u003c/p\u003e\n\u003cpre\u003e\u003ccode class=\"language-bash\"\u003e# 始终验证\n\u0026quot;这个方案有什么潜在问题？\u0026quot;\n\n# 要求解释\n\u0026quot;为什么选择这个方案而不是其他方案？\u0026quot;\n\n# 交叉验证\n\u0026quot;这个 API 在 Next.js 14 中是最新的吗？\u0026quot;\n\n# 测试驱动\n\u0026quot;先写测试，再实现功能\u0026quot;\n\u003c/code\u003e\u003c/pre\u003e\n\u003ch3\u003e4. 缺乏迭代\u003c/h3\u003e\n\u003cp\u003e\u003cstrong\u003e问题：\u003c/strong\u003e 期望一次就得到完美答案\u003c/p\u003e\n\u003cp\u003e\u003cstrong\u003e解决方案：\u003c/strong\u003e\u003c/p\u003e\n\u003cpre\u003e\u003ccode class=\"language-bash\"\u003e# 第一轮\n\u0026quot;给出一个初步方案\u0026quot;\n\n# 第二轮\n\u0026quot;这个方案有哪些可以改进的地方？\u0026quot;\n\n# 第三轮\n\u0026quot;现在实现改进后的版本\u0026quot;\n\u003c/code\u003e\u003c/pre\u003e\n\u003ch3\u003e5. 忽视安全\u003c/h3\u003e\n\u003cp\u003e\u003cstrong\u003e问题：\u003c/strong\u003e 生成的代码可能有安全隐患\u003c/p\u003e\n\u003cp\u003e\u003cstrong\u003e解决方案：\u003c/strong\u003e\u003c/p\u003e\n\u003cpre\u003e\u003ccode class=\"language-bash\"\u003e# 明确要求\n\u0026quot;确保代码符合 OWASP 安全最佳实践\u0026quot;\n\n# 安全检查\n\u0026quot;审查这段代码的安全漏洞\u0026quot;\n\n# 不暴露敏感信息\n# ❌ 不要分享：API Keys、密码、数据库凭证\n# ✅ 可以分享：代码结构、错误信息（脱敏后）\n\u003c/code\u003e\u003c/pre\u003e\n\u003chr\u003e\n\u003ch2\u003e🔥 高级功能\u003c/h2\u003e\n\u003ch3\u003e1. 多文件协同编辑\u003c/h3\u003e\n\u003cpre\u003e\u003ccode class=\"language-bash\"\u003e# 同时修改多个相关文件\n\u0026quot;更新用户认证流程，需要同步修改：\n1. @src/auth/login.ts - 添加双因素认证\n2. @src/auth/types.ts - 添加新的类型定义\n3. @src/components/LoginForm.tsx - 添加 2FA 输入\n4. @src/pages/settings.tsx - 添加 2FA 设置\n\n确保所有改动保持一致\u0026quot;\n\u003c/code\u003e\u003c/pre\u003e\n\u003ch3\u003e2. 自动化工作流\u003c/h3\u003e\n\u003cpre\u003e\u003ccode class=\"language-bash\"\u003e# 创建开发脚本\n\u0026quot;帮我写一个 npm 脚本，自动完成：\n1. 运行测试\n2. 检查代码风格\n3. 构建项目\n4. 生成类型定义\u0026quot;\n\n# Git 自动化\n\u0026quot;创建一个 git hook，在提交前自动运行 lint 和测试\u0026quot;\n\u003c/code\u003e\u003c/pre\u003e\n\u003ch3\u003e3. 代码迁移\u003c/h3\u003e\n\u003cpre\u003e\u003ccode class=\"language-bash\"\u003e# 语言迁移\n\u0026quot;将这个 Python 脚本迁移到 TypeScript，保持功能一致\u0026quot;\n\n# 框架迁移\n\u0026quot;帮我把这个 React Class 组件改成 Hooks 版本\u0026quot;\n\n# 版本升级\n\u0026quot;升级这个项目到 Next.js 14，列出所有需要修改的地方\u0026quot;\n\u003c/code\u003e\u003c/pre\u003e\n\u003ch3\u003e4. 文档生成\u003c/h3\u003e\n\u003cpre\u003e\u003ccode class=\"language-bash\"\u003e# API 文档\n\u0026quot;为所有 API 端点生成 OpenAPI 规范文档\u0026quot;\n\n# 代码注释\n\u0026quot;为这个文件添加 JSDoc 注释，包括参数说明和返回值\u0026quot;\n\n# README 更新\n\u0026quot;根据最新的功能更新 README.md\u0026quot;\n\u003c/code\u003e\u003c/pre\u003e\n\u003ch3\u003e5. 性能分析\u003c/h3\u003e\n\u003cpre\u003e\u003ccode class=\"language-bash\"\u003e# Bundle 分析\n\u0026quot;分析这个项目的打包体积，找出最大的依赖\u0026quot;\n\n# 渲染性能\n\u0026quot;找出这个页面中导致重复渲染的组件\u0026quot;\n\n# 数据库优化\n\u0026quot;分析这些查询，给出索引优化建议\u0026quot;\n\u003c/code\u003e\u003c/pre\u003e\n\u003chr\u003e\n\u003ch2\u003e📖 学习资源\u003c/h2\u003e\n\u003ch3\u003e官方文档\u003c/h3\u003e\n\u003cul\u003e\n\u003cli\u003e\u003ca href=\"https://code.claude.com/docs\"\u003eClaude Code 官方文档\u003c/a\u003e\u003c/li\u003e\n\u003cli\u003e\u003ca href=\"https://docs.anthropic.com/\"\u003eAnthropic 开发者文档\u003c/a\u003e\u003c/li\u003e\n\u003cli\u003e\u003ca href=\"https://github.com/anthropics/claude-code\"\u003eGitHub 仓库\u003c/a\u003e\u003c/li\u003e\n\u003c/ul\u003e\n\u003ch3\u003e社区资源\u003c/h3\u003e\n\u003cul\u003e\n\u003cli\u003e\u003ca href=\"https://anthropic.com/discord\"\u003eClaude Developers Discord\u003c/a\u003e\u003c/li\u003e\n\u003cli\u003e\u003ca href=\"https://reddit.com/r/ClaudeAI\"\u003eReddit r/ClaudeAI\u003c/a\u003e\u003c/li\u003e\n\u003cli\u003e\u003ca href=\"https://github.com/anthropics/claude-code/issues\"\u003eGitHub Issues\u003c/a\u003e\u003c/li\u003e\n\u003c/ul\u003e\n\u003ch3\u003e学习路径建议\u003c/h3\u003e\n\u003cpre\u003e\u003ccode\u003e第 1 周：基础使用\n├── 安装配置\n├── 基本对话\n├── 文件查看\n└── 简单代码生成\n\n第 2 周：进阶功能\n├── 多文件编辑\n├── Git 集成\n├── 调试辅助\n└── 测试生成\n\n第 3 周：实战应用\n├── 完整功能开发\n├── 代码重构\n├── 性能优化\n└── 文档生成\n\n第 4 周：高效工作流\n├── 自定义命令\n├── 自动化脚本\n├── 团队协作\n└── 最佳实践总结\n\u003c/code\u003e\u003c/pre\u003e\n\u003chr\u003e\n\u003ch2\u003e💡 个人建议\u003c/h2\u003e\n\u003cp\u003e基于我的使用经验，以下几点最重要：\u003c/p\u003e\n\u003ch3\u003e1. 把 Claude 当同事，不是搜索引擎\u003c/h3\u003e\n\u003cul\u003e\n\u003cli\u003e✅ 好：「我们一起重构这个模块，你先分析，我review 方案后再实现」\u003c/li\u003e\n\u003cli\u003e❌ 差：「给我代码」\u003c/li\u003e\n\u003c/ul\u003e\n\u003ch3\u003e2. 保持对话的连续性\u003c/h3\u003e\n\u003cul\u003e\n\u003cli\u003e一个会话专注于一个主题\u003c/li\u003e\n\u003cli\u003e复杂任务分多个会话完成\u003c/li\u003e\n\u003cli\u003e定期 \u003ccode\u003e/clear\u003c/code\u003e 保持上下文清爽\u003c/li\u003e\n\u003c/ul\u003e\n\u003ch3\u003e3. 学会「追问」\u003c/h3\u003e\n\u003cpre\u003e\u003ccode class=\"language-bash\"\u003e# 追问原因\n「为什么选择这个方案？」\n\n# 追问替代方案\n「还有其他实现方式吗？各有什么优缺点？」\n\n# 追问细节\n「这个类型定义能再详细点吗？」\n\u003c/code\u003e\u003c/pre\u003e\n\u003ch3\u003e4. 建立自己的提示词库\u003c/h3\u003e\n\u003cp\u003e保存常用的提示词模板，例如：\u003c/p\u003e\n\u003cpre\u003e\u003ccode class=\"language-bash\"\u003e# 代码审查模板\n「审查这段代码，关注：\n1. 功能正确性\n2. 性能问题\n3. 代码可读性\n4. 类型安全\n5. 错误处理\n\n给出具体的改进建议和代码示例」\n\n# 新功能开发模板\n「实现 [功能描述]，要求：\n- 技术栈：[技术选型]\n- 输入：[输入数据]\n- 输出：[期望结果]\n- 约束：[限制条件]\n\n先设计方案，确认后再实现」\n\u003c/code\u003e\u003c/pre\u003e\n\u003ch3\u003e5. 验证、验证、再验证\u003c/h3\u003e\n\u003cul\u003e\n\u003cli\u003e运行生成的代码\u003c/li\u003e\n\u003cli\u003e检查测试是否通过\u003c/li\u003e\n\u003cli\u003e手动验证关键功能\u003c/li\u003e\n\u003cli\u003e不要盲目信任任何输出\u003c/li\u003e\n\u003c/ul\u003e\n\u003chr\u003e\n\u003ch2\u003e🎯 快速参考卡片\u003c/h2\u003e\n\u003ch3\u003e常用命令\u003c/h3\u003e\n\u003cpre\u003e\u003ccode class=\"language-bash\"\u003eclaude              # 启动 Claude Code\nclaude /path        # 在指定目录启动\nclaude --version    # 查看版本\n/help               # 查看帮助\n/clear              # 清除对话\n/exit               # 退出\n\u003c/code\u003e\u003c/pre\u003e\n\u003ch3\u003e提示词模板\u003c/h3\u003e\n\u003cpre\u003e\u003ccode class=\"language-bash\"\u003e# 分析代码\n「分析 @filename，解释：\n1. 主要功能\n2. 关键算法\n3. 依赖关系\n4. 改进建议」\n\n# 生成代码\n「创建 [组件/函数]，实现 [功能]，要求：\n- 使用 [技术栈]\n- 包含 [特性]\n- 遵循 [规范]」\n\n# 调试问题\n「这个错误怎么修复？\n[错误信息]\n相关代码：@filename」\n\n# 代码审查\n「审查这段代码，找出：\n- bug\n- 性能问题\n- 代码异味\n- 安全隐患」\n\u003c/code\u003e\u003c/pre\u003e\n\u003chr\u003e\n\u003cp\u003e\u003cstrong\u003e最后提醒：\u003c/strong\u003e Claude Code 是强大的工具，但它只是工具。你的判断力、创造力和责任感才是写出好代码的关键。用它来增强你的能力，而不是替代你的思考。\u003c/p\u003e\n\u003cp\u003e祝编码愉快！🚀\u003c/p\u003e\n"])</script><script>self.__next_f.push([1,"6:[\"$\",\"div\",null,{\"className\":\"min-h-screen flex flex-col\",\"children\":[[\"$\",\"div\",null,{\"className\":\"fixed inset-0 z-0\",\"children\":[[\"$\",\"div\",null,{\"className\":\"absolute inset-0 bg-[linear-gradient(to_right,#8080800a_1px,transparent_1px),linear-gradient(to_bottom,#8080800a_1px,transparent_1px)] bg-[size:28px_48px] -z-10\"}],[\"$\",\"div\",null,{\"className\":\"absolute left-0 right-0 top-0 -z-10 m-auto h-[1200px] w-[1200px] rounded-full bg-neutral-400 opacity-10 blur-[100px]\"}]]}],[\"$\",\"$Le\",null,{}],[\"$\",\"main\",null,{\"className\":\"flex-grow\",\"children\":[\"$\",\"article\",null,{\"className\":\"relative z-20 w-[896px] mx-auto mt-32 mb-12\",\"children\":[\"$\",\"div\",null,{\"className\":\"prose dark:prose-invert max-w-none\",\"children\":[\"$\",\"div\",null,{\"dangerouslySetInnerHTML\":{\"__html\":\"$f\"}}]}]}]}],[\"$\",\"$L10\",null,{}]]}]\n"])</script><script>self.__next_f.push([1,""])</script></body></html>
