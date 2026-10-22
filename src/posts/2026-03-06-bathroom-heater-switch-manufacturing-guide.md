@@ -1,7 +1,7 @@
 ---
 title: "如何生产一款三开照明双控单电机浴霸开关：完整产品开发指南"
 description: "从产品定义、电路设计、模具开发到生产企业选择，详解浴霸开关的完整开发流程和供应链资源"
-author: "朱后凯"
+author: "hopekayo"
 date: "2026-03-06"
 category: "硬件开发"
 tags: ["hardware", "iot", "switch", "manufacturing", "product-development", "bathroom-heater"]

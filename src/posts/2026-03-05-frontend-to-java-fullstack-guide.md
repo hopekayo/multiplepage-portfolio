@@ -1,7 +1,7 @@
 ---
 title: "前端工程师的 Java 全栈转型指南：12 周从 React 到 Spring Boot"
 description: "专为前端开发者设计的 Java 全栈学习路径，借助 AI 工具高效转型。包含完整学习路线图、资源推荐和每周学习计划"
-author: "朱后凯"
+author: "hopekayo"
 date: "2026-03-05"
 category: "技术成长"
 tags: ["java", "spring-boot", "fullstack", "career", "learning", "frontend-to-backend"]

@@ -1,7 +1,7 @@
 ---
 title: "OpenClaw 安装使用与风险 - 课程大纲"
 description: "90 分钟完整课程大纲：OpenClaw 安装配置、核心功能演示、企业应用场景、安全风险与竞品对比"
-author: "朱后凯"
+author: "hopekayo"
 date: "2026-03-10"
 category: "技术教程"
 tags: ["openclaw", "ai-agent", "automation", "course", "tutorial", "qqbot", "feishu"]

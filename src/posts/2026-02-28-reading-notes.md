@@ -1,7 +1,7 @@
 ---
 title: "移民思考与身份认同 - 阅读笔记"
 description: "整理两篇关于移民冲动与身份认同的腾讯文档核心观点"
-author: "朱后凯"
+author: "hopekayo"
 date: "2026-02-28"
 category: "随笔"
 tags: ["reading", "notes", "immigration", "thoughts"]

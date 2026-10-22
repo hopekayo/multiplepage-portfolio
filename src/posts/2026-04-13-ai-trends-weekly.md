@@ -4,7 +4,7 @@ description: "本周 AI 开发趋势：企业级 Agent 规模化部署，开源�
 date: "2026-04-13"
 category: "技术前沿"
 tags: ["ai", "trends", "weekly", "llm", "agents"]
-author: "朱后凯"
+author: "hopekayo"
 image: "/assets/images/posts/ai-trends-weekly.jpg"
 ---
 

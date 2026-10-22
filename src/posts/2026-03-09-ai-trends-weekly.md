@@ -1,7 +1,7 @@
 ---
 title: "AI 开发趋势周报 (2026-03-02 ~ 2026-03-09)"
 description: "本周 AI 趋势：Agent 生产化部署成主流，RAG 技术成熟，GitHub 热门项目解析"
-author: "朱后凯"
+author: "hopekayo"
 date: "2026-03-09"
 category: "技术前沿"
 tags: ["ai", "trends", "weekly", "rag", "agents", "llm", "github"]
