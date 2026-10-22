@@ -4,14 +4,14 @@ description: "我的 HUMAN 3.0 评估结果：认知成熟速度超过行动系�
 date: "2026-04-20"
 category: "个人成长"
 tags: ["human3", "assessment", "career", "ai", "self-development"]
-author: "朱后凯"
+author: "hopekayo"
 image: "/assets/images/posts/human3-assessment.jpg"
 ---
 
 # HUMAN 3.0 发展评估结果
 
 **评估日期：** 2026-04-20  
-**评估者：** 朱后凯  
+**评估者：** hopekayo  
 **Metatype：** 清醒卡壳型实验者（Aware-but-Stalled Builder）
 
 ---

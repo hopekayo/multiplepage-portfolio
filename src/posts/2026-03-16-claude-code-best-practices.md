@@ -1,7 +1,7 @@
 ---
 title: "Claude Code 最佳实践指南 - 从入门到精通"
 description: "全面的 Claude Code 使用指南，涵盖核心功能、高效技巧、实战场景和提示词最佳实践，帮助你快速掌握这款 AI 编程助手"
-author: "朱后凯"
+author: "hopekayo"
 date: "2026-03-16"
 category: "技术教程"
 tags: ["claude", "ai", "coding", "productivity", "tutorial", "best-practices"]

@@ -5,7 +5,7 @@ date: "2026-04-09"
 image: "/assets/images/posts/ai-trends-weekly.jpg"
 category: "技术前沿"
 tags: ["ai", "trends", "weekly", "llm", "agents", "anthropic", "langchain"]
-author: "朱后凯"
+author: "hopekayo"
 readTime: "8"
 ---
 

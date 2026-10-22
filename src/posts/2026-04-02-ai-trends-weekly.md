@@ -1,7 +1,7 @@
 ---
 title: "AI 开发趋势周报 (2026-03-17 ~ 2026-04-02)"
 description: "本周 AI 趋势：Anthropic 经济指数揭示学习曲线效应，长周期科学计算工作流，LangSmith Fleet 企业级 Agent 管理"
-author: "朱后凯"
+author: "hopekayo"
 date: "2026-04-02"
 category: "技术前沿"
 tags: ["ai", "trends", "weekly", "llm", "agents", "anthropic", "langchain"]

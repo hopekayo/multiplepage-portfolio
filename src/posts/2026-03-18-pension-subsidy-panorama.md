@@ -1,7 +1,7 @@
 ---
 title: "国家养老金补贴全景图：1.2 万亿财政补贴流向哪里？"
 description: "深度解析 2025 年中央财政 1.2 万亿养老金补贴的真实流向，揭示体制内、企业职工、城乡居民三大群体的待遇差距"
-author: "朱后凯"
+author: "hopekayo"
 date: "2026-03-18"
 category: "社会观察"
 tags: ["pension", "social-security", "policy", "data-analysis", "retirement", "财政补贴"]

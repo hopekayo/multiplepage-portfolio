@@ -1,7 +1,7 @@
 ---
 title: "AI 开发趋势周报 (2026-03-09 ~ 2026-03-16)"
 description: "本周 AI 趋势：Anthropic 研究更新，AI 劳动力市场影响，Agent 自主性测量标准化"
-author: "朱后凯"
+author: "hopekayo"
 date: "2026-03-16"
 category: "技术前沿"
 tags: ["ai", "trends", "weekly", "llm", "agents", "anthropic", "research"]

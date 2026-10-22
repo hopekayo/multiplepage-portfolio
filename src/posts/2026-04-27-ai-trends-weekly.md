@@ -5,7 +5,7 @@ date: "2026-04-27"
 image: "/assets/images/posts/ai-trends-weekly.jpg"
 slug: "posts/2026-04-27-ai-trends-weekly"
 tags: ["ai", "trends", "weekly", "llm", "agents"]
-author: "朱后凯"
+author: "hopekayo"
 category: "技术前沿"
 readTime: "8"
 ---

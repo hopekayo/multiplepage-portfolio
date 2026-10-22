@@ -1,7 +1,7 @@
 ---
 title: "前端工程师的 Go 全栈转型指南：10 周从 Vue 到 Gin 框架"
 description: "专为前端开发者设计的 Go 全栈学习路径，从语法基础到微服务实战。包含完整学习路线图、代码示例、项目实战和学习资源"
-author: "朱后凯"
+author: "hopekayo"
 date: "2026-03-06"
 category: "技术成长"
 tags: ["go", "golang", "gin", "fullstack", "vue3", "backend", "learning", "career"]
